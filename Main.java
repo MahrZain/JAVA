@@ -68,7 +68,7 @@ float gpa = sc.nextFloat();
 sc.nextLine();
 System.out.print("Enter Student Name: ");
 String name = sc.nextLine();
-System.out.print("Enrollement(y/n): ");
+System.out.print("Enrollement(true/false): ");
 boolean enr = sc.nextBoolean();
 System.out.print("Grade: ");
 char grade = sc.next().charAt(0);
@@ -78,20 +78,21 @@ System.out.println("GPA After 0.5 using += Operator: "+gpa);
 gpa-=0.2;
 System.out.println("GPA After 0.2 using -= Operator: "+gpa);
 id*=id;
-System.out.print("ID After Double using *= Operator: "+id);
+System.out.println("ID After Double using *= Operator: "+id);
 id/=2;
-System.out.print("ID After Divide using /= Operator: "+id);
+System.out.println("ID After Divide using /= Operator: "+id);
 System.out.println("-------------------------------------------------------------");
 id++;
 System.out.println("Student ID After POST-increment Operator: "+id);
 --id;
 System.out.println("Student ID After POST-increment Operator: "+id);
 
+System.out.println("-------------------------------------------------------------");
 
 
+System.out.println("Input id: "+id +"\n" + "Input Name: "+ name +"\n"+ "Enrollment Status: "+ enr +"\n"+ "Grade: "+ grade +"\n"+"GPA: "+ gpa);
 
-// System.out.println(id +","+ name +","+ enr +","+ grade +","+ gpa);
-
+sc.close();
 
     }
 }
