@@ -99,4 +99,43 @@
 
 
 
+// import java.util.*;
+// public class Main{
+//     public static void main(String []args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Press 1 ==> For Transfer Amount");
+//         System.out.println("Press 2 ==> For Paying Bill");
+//         System.out.println("Press 3 ==> Default");
+//         int choice = sc.nextInt();
+//         if(choice == 1){
+//             System.out.println("Press 1 ==> For Jazz to Jazz");
+//             System.out.println("Press 2 ==> For Bank Transfer");
+//             int subchoice = sc.nextInt();
+//             if(subchoice == 1){
+//                 System.out.println("Amount Transfered");
+//             }
+//             else if(subchoice == 2){
+//                 System.out.println("Amount Transfered");
+//             }
+//         }
+//         else if(choice == 2){
+//             System.out.println("Press a ==> For IESCO Bill");
+//             System.out.println("Press b ==> WASA");
+//             char bank_choice = sc.next().charAt(0);
+//             switch (bank_choice) {
+//                 case 'a':
+//                 System.out.println("Bill Payed");
+//                 break;
+//                 case 'b':
+//                 System.out.println("Bill Payed");
+//                 default:
+//                     break;
+//             }
+//         }
+        
+//     }
+// }
+
+
+
 
