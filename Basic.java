@@ -1,18 +1,28 @@
-import java.util.*;
 public class Basic {
-    public static void main(String [] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Your Age: ");
-        int a = sc.nextInt();
-        if(a > 18 && a < 900){
-            System.out.println("Congratulation! Your Are Eligible!");
+    public static boolean isPrime(int a){
+        boolean b=true;
+        for(int i=2;i<=a-1;i++){
+            if(a%i==0){
+                    b=false;
+            }
         }
-        else if(a == 18 ){
-            System.out.println("Congratulation! Your Are Eligible!");
-        }
-        else{
-            System.out.println("Sorry! Your Are Not Eligible!");
-
-        }
+        return b;
     }
+    public static void range(int b){
+        for(int i=2;i<=b;i++){
+            if(isPrime(i)){
+                System.out.println("Prime: "+ i);
+            }
+        }
+
+    }
+public static void main(String[] args) {
+    
+int a=30;
+range(a);
+
+
+
 }
+}
+
