@@ -172,7 +172,11 @@ import java.util.*;
 public class Main{
     public static void main(String[] args) {
 
+int z=100;
+while (z>0) {
+    z=z/10;
+System.out.println(z);
+}
 
-        
     }
 }

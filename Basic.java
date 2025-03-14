@@ -14,23 +14,45 @@
 // }
 // }
 
-
-
-
+import java.util.Scanner;
 
 public class Basic {
-    public static void bin(int n){
-        int total=0;
-        int power=0;
-        // int LD=0;
-        while(n!=0){int LD = n%10;
-        n =n/10;
-        total = total + (LD * (int)Math.pow(2, power));
-        power++;}
-        System.out.println(total);
-    }
-public static void main(String[] args) {
-    bin(9);   
-}
 
+    public static void main(String[] args) {
+        int z = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("================================");
+        for (int i = 0; i < 3; i++) {
+            String s1 = sc.next();
+            int x = sc.nextInt();
+            int count = 0;
+            z = x;
+            while (z > 0) {
+                z = z / 10;
+                count++;
+                
+            }
+            if (count == 0) {
+                System.out.print(s1+"\t\t\t   ");
+                System.out.print("00" + x);
+                
+            }
+            else if(count == 1){
+                System.out.print(s1+"\t\t\t   ");
+                System.out.println("00" + x);
+            }
+            else if(count == 2){
+                System.out.print(s1+"\t\t\t   ");
+                System.out.println("0" + x);
+            }
+            else{
+                System.out.print(s1+"\t\t\t");
+                System.out.print(x);
+
+            }
+        }
+        System.out.println();
+        System.out.println("================================");
+
+    }
 }
