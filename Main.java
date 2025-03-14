@@ -137,5 +137,42 @@
 // }
 
 
+// import java.util.*;
+// public class Main{
+//     public static void main(String[] args) {
+//         int choice,vote1=0,vote2=0,vote3=0;
+//         do{
+//             System.out.println("1 ==> Vote for 1st Candidate");
+//             System.out.println("2 ==> Vote for 2st Candidate");
+//             System.out.println("3 ==> Vote for 3st Candidate");
+//             System.out.println("4 ==> Exit and Show Results");
+//             System.out.print("Enter your Choice: ");
+//             Scanner sc = new Scanner(System.in);
+//             choice = sc.nextInt();
+//             if(choice == 1){
+//                 vote1++;
+//             }
+//             else if(choice == 2){
+//                 vote2++;
+//             }
+//             else if(choice == 3){
+//                 vote3++;
+//             }
+//         }while(choice != 4);
+//         System.out.println("Exiting ...");
+//         System.out.println("-----------------------------------------------------");
+//         System.out.println("******************Results**************");
+// System.out.println("Vote for 1st: "+ vote1);
+// System.out.println("Vote for 2st: "+ vote2);
+// System.out.println("Vote for 3st: "+ vote3);
+//     }
+// }
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
 
 
+        
+    }
+}
