@@ -24,7 +24,6 @@
 // }
 // }
 
-
 // import java.util.*;
 // public class Main{
 //     public static void main(String arg[]){
@@ -45,17 +44,8 @@
 //             System.out.println("Divion: "+divion);
 //         }
 
-
-
-
 //     }
 // }
-
-
-
-
-
-
 
 // import java.util.*;
 // public class Main{
@@ -89,15 +79,12 @@
 
 // System.out.println("-------------------------------------------------------------");
 
-
 // System.out.println("Input id: "+id +"\n" + "Input Name: "+ name +"\n"+ "Enrollment Status: "+ enr +"\n"+ "Grade: "+ grade +"\n"+"GPA: "+ gpa);
 
 // sc.close();
 
 //     }
 // }
-
-
 
 // import java.util.*;
 // public class Main{
@@ -132,10 +119,9 @@
 //                     break;
 //             }
 //         }
-        
+
 //     }
 // }
-
 
 // import java.util.*;
 // public class Main{
@@ -169,14 +155,34 @@
 // }
 
 import java.util.*;
+
+// public class Main {
+//     public static int sq(int a) {
+//         return (a * a);
+//     }
+
+//     public static void main(String[] args) {
+//             Scanner c = new Scanner(System.in);
+//             System.out.print("Enter a Number: ");
+//             int result = c.nextInt();
+//             result = sq(result);
+//             System.out.println("Square is: "+result);
+
+//     }
+// }
+
+class Student{
+    String Name;
+    int age;
+    char grade;
+}
 public class Main{
     public static void main(String[] args) {
-
-int z=100;
-while (z>0) {
-    z=z/10;
-System.out.println(z);
-}
-
+        Student s = new Student();
+        s.Name="Zain";
+        s.age=18;
+        s.grade='A';
+        System.out.println(s.Name);
+        System.out.println(s.age);
     }
 }
