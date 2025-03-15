@@ -188,9 +188,9 @@ import java.util.*;
 // }
 
 class Student {
-    private String name;
-    private int age;
-    private char grade;
+    String name;
+    int age;
+    char grade;
 
     public void Student_Name(String sName) {
         name = sName;

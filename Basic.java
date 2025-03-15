@@ -59,38 +59,57 @@
 
 
 import java.util.*;
-public class Basic{
-    public static int reverse_number(int a) {
-        int rem=0;
-        while (a!=0) {
-            int digit=a%10;
-            rem = rem * 10 + digit;
-            a/=10;
-        }
-        return rem;
-    }
-    public static boolean palendrom(int a, int b) {
-        boolean check = false;
-        if(a == b){
-            return true;
-        }
-        return check;
-    }
-    public static void main(String[] args) {
-        int a,b=0;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a Number: ");
-        a = sc.nextInt();
-        b=a;
-        a= reverse_number(a);
-        boolean result = palendrom(a, b);
-        if(result){
-            System.out.println("Number is Palendrom");
-        }
-        else{
+// public class Basic{
+//     public static int reverse_number(int a) {
+//         int rem=0;
+//         while (a!=0) {
+//             int digit=a%10;
+//             rem = rem * 10 + digit;
+//             a/=10;
+//         }
+//         return rem;
+//     }
+//     public static boolean palendrom(int a, int b) {
+//         boolean check = false;
+//         if(a == b){
+//             return true;
+//         }
+//         return check;
+//     }
+//     public static void main(String[] args) {
+//         int a,b=0;
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter a Number: ");
+//         a = sc.nextInt();
+//         b=a;
+//         a= reverse_number(a);
+//         boolean result = palendrom(a, b);
+//         if(result){
+//             System.out.println("Number is Palendrom");
+//         }
+//         else{
             
-            System.out.println("Number is Not a Palendrom");
+//             System.out.println("Number is Not a Palendrom");
+//         }
+
+//     }
+// }
+
+
+public class Basic{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("================================");
+
+        // Reading 3 inputs
+        for (int i = 0; i < 3; i++) {
+            String s1 = sc.next();
+            int x = sc.nextInt();
+
+            // Using printf to format the output
+            System.out.printf("%-15s%03d\n", s1, x);
         }
 
+        System.out.println("================================");
     }
 }
