@@ -96,20 +96,58 @@ import java.util.*;
 // }
 
 
+// public class Basic{
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("================================");
+
+//         // Reading 3 inputs
+//         for (int i = 0; i < 3; i++) {
+//             String s1 = sc.next();
+//             int x = sc.nextInt();
+
+//             // Using printf to format the output
+//             System.out.printf("%-15s%03d\n", s1, x);
+//         }
+
+//         System.out.println("================================");
+//     }
+// }
+
+
 public class Basic{
+    // public static void hollow(int row,int col) {
+    //     for(int i=0;i<=row;i++){
+    //         for (int j=0; j <=col; j++) {
+    //             if (i==0|j==0|i==row|j==col) {
+    //                 System.out.print("*");
+    //             }
+    //             else{
+    //                 System.out.print(" ");
+    //             }
+    //         }
+    //         System.out.println();
+    //     }
+    // }
+    // public static void main(String []args){
+    // hollow(10, 10);
+    // }
+
+    // public static void main(String[] args) {
+    //     int n=50;
+    //     for (int i=1;i<=n;i++){
+    //         for(int j=1;j<=n-i;j++){
+    //             System.out.print(" ");
+    //         }
+    //         for(int j=1;j<=i;j++){
+    //             System.out.print(".");
+    //         }
+    //         System.out.println();
+    //     }
+    // }
+
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("================================");
-
-        // Reading 3 inputs
-        for (int i = 0; i < 3; i++) {
-            String s1 = sc.next();
-            int x = sc.nextInt();
-
-            // Using printf to format the output
-            System.out.printf("%-15s%03d\n", s1, x);
-        }
-
-        System.out.println("================================");
+        
     }
 }
