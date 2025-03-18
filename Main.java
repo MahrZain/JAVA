@@ -230,17 +230,17 @@ class Bank {
             this.Amount=Amount;
             this.id=id;
 
-    }
-    public void display() {
-        System.out.println("ID: "+id);
-        System.out.println();
-        System.out.println("Name: "+Name);
-        System.out.println();
-        System.out.println("Age: "+Age);
-        System.out.println();
-        System.out.println("Amount: "+Amount);
-        System.out.println();
-    }
+        }
+        public void display() {
+            System.out.println("ID: "+id);
+            System.out.println();
+            System.out.println("Name: "+Name);
+            System.out.println();
+            System.out.println("Age: "+Age);
+            System.out.println();
+            System.out.println("Amount: "+Amount);
+            System.out.println();
+        }
 }
 public class Main {
     public static void main(String[] args) {
