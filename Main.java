@@ -192,8 +192,9 @@ import java.util.*;
 //     int age;
 //     char grade;
 
-//     public void Student_Name(String sName) {
-//         name = sName;
+//     public static void Student_Name(String sName) {
+//         Student z = new Student();
+//         z.name = sName;
 //     }
 //     public void Student_Age(int sAge) {
 //         age = sAge;
@@ -213,9 +214,42 @@ import java.util.*;
 // public class Main {
 //     public static void main(String[] args) {
 //         Student s = new Student();
-//         s.Student_Name("Zain");
+//         Student.Student_Name("Zain");
 //         s.Student_Age(19);
 //         s.Student_Grade('A');
 //         s.display();
 //     }
-// }
+class Bank {
+    private int id;    
+    private String Name;
+    private int Age;
+    private int Amount;
+    public void set(int id,String name, int age, int Amount){
+            Name=name;
+            this.Age=age;
+            this.Amount=Amount;
+            this.id=id;
+
+    }
+    public void display() {
+        System.out.println("ID: "+id);
+        System.out.println();
+        System.out.println("Name: "+Name);
+        System.out.println();
+        System.out.println("Age: "+Age);
+        System.out.println();
+        System.out.println("Amount: "+Amount);
+        System.out.println();
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        int id=1;
+        String Name="Zain";
+        int Age = 19;
+        int Amount = 1000;
+        Bank b = new Bank();
+        b.set(id, Name, Age, Amount);
+        b.display();
+    }
+}
