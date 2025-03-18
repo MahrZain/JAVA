@@ -219,37 +219,99 @@ import java.util.*;
 //         s.Student_Grade('A');
 //         s.display();
 //     }
-class Bank {
-    private int id;    
-    private String Name;
-    private int Age;
-    private int Amount;
-    public void set(int id,String name, int age, int Amount){
-            Name=name;
-            this.Age=age;
-            this.Amount=Amount;
-            this.id=id;
+// class Bank {
+//     private int id;    
+//     private String Name;
+//     private int Age;
+//     private int Amount;
+//     public void set(int id,String name, int age, int Amount){
+//             Name=name;
+//             this.Age=age;
+//             this.Amount=Amount;
+//             this.id=id;
 
-        }
-        public void display() {
-            System.out.println("ID: "+id);
-            System.out.println();
-            System.out.println("Name: "+Name);
-            System.out.println();
-            System.out.println("Age: "+Age);
-            System.out.println();
-            System.out.println("Amount: "+Amount);
-            System.out.println();
-        }
+//         }
+//         public void display() {
+//             System.out.println("ID: "+id);
+//             System.out.println();
+//             System.out.println("Name: "+Name);
+//             System.out.println();
+//             System.out.println("Age: "+Age);
+//             System.out.println();
+//             System.out.println("Amount: "+Amount);
+//             System.out.println();
+//         }
+// }
+// public class Main {
+//     public static void main(String[] args) {
+//         int id=1;
+//         String Name="Zain";
+//         int Age = 19;
+//         int Amount = 1000;
+//         Bank b = new Bank();
+//         b.set(id, Name, Age, Amount);
+//         b.display();
+//     }
+// }
+
+class StudentRecord{
+    int StudentId;
+    String StudentName;
+    int Mark_1;
+    int Mark_2;
+    int Mark_3;
+    int Avg;
+    public void Input(){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Student Name: ");
+        StudentName = sc.nextLine();
+        System.out.print("Enter Student ID: ");
+        StudentId = sc.nextInt();
+        System.out.print("Enter Student Marks 1: ");
+        Mark_1= sc.nextInt();
+        System.out.print("Enter Student Marks 2: ");
+        Mark_2= sc.nextInt();
+        System.out.print("Enter Student Marks 3: ");
+        Mark_3= sc.nextInt();
+    }
+    public float avg(){
+        float Average = (float)(Mark_1+Mark_2+Mark_3)/3;
+        return Average;
+    }
+    public void display(){
+        System.out.println("Student ID: "+StudentId);
+        System.out.println("Student Name: "+StudentName);
+        System.out.println("Student Marks 1: "+Mark_1);
+        System.out.println("Student Marks 2: "+Mark_2);
+        System.out.println("Student Marks 3: "+Mark_3);
+        System.out.println("Student Average: "+avg());
+    }
+
+
+
+
 }
-public class Main {
+public class Main{
     public static void main(String[] args) {
-        int id=1;
-        String Name="Zain";
-        int Age = 19;
-        int Amount = 1000;
-        Bank b = new Bank();
-        b.set(id, Name, Age, Amount);
-        b.display();
+        // for (int i = 0; i <=3; i++) {
+        //     StudentRecord s[i] = new StudentRecord();
+        //     s[i].Input();
+        //     System.out.println("-----------------------------------");
+        //     s[i].display();
+        //     System.out.println("-----------------------------------");
+        //     }
+
+        StudentRecord s1 = new StudentRecord();
+        StudentRecord s2 = new StudentRecord();
+        StudentRecord s3 = new StudentRecord();
+            s1.Input();
+            s1.display();
+            System.out.println("--------------------------");
+            s2.Input();
+            s2.display();
+            System.out.println("--------------------------");
+            s3.Input();
+            s3.display();
+            System.out.println("--------------------------");
     }
 }
