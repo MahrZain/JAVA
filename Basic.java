@@ -211,28 +211,50 @@ public class Basic{
 // }
 
 
-public static void main(String[] args) {
-    int n=25;
-    for(int i=0;i<=n;i++){
-        for(int j=1;j<=n-i;j++){
-            System.out.print(" ");
-        }
-        for(int z=1;z<=n;z++){
-            System.out.print("*");
-        }
-        System.out.println();
-    }
-    for (int i = n; i >=1; i--) {
-        for(int j=1;j<=n-i;j++){
-            System.out.print(" ");
-        }
-        for(int z=1;z<=n;z++){
-            System.out.print("*");
-        }
-        System.out.println();
-    }
+// public static void main(String[] args) {
+//     int n=25;
+//     for(int i=0;i<=n;i++){
+//         for(int j=1;j<=n-i;j++){
+//             System.out.print(" ");
+//         }
+//         for(int z=1;z<=n;z++){
+//             System.out.print("*");
+//         }
+//         System.out.println();
+//     }
+//     for (int i = n; i >=1; i--) {
+//         for(int j=1;j<=n-i;j++){
+//             System.out.print(" ");
+//         }
+//         for(int z=1;z<=n;z++){
+//             System.out.print("*");
+//         }
+//         System.out.println();
+//     }
 
 
-}
+// }
+
+
+
+
+// public static void main(String[] args) {
+//     int n=50;
+//     for(int i=0;i<=n;i++){
+//         for(int j=1;j<=n-i;j++){
+//                 System.out.print(" ");
+//         }
+//         for(int j=1;j<=n;j++){
+//             if(j==1||j==n||i==0||i==n){
+//                 System.out.print("*");
+//             }
+//             else{
+//                 System.out.print(" ");
+//             }
+//         }
+//         System.out.println();
+//     }
+
+// }
 
 }
