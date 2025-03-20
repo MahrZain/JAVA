@@ -337,3 +337,51 @@ import java.util.*;
 //         s.display(id, name, age);
 //     }
 // }
+import java.util.*;
+// class Employee{
+//     private int id;
+//     private String name;
+//     private int salary;
+
+//     public void set_data(){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Employee ID: ");
+//         id = sc.nextInt();
+//         sc.nextLine();
+//         System.out.print("Enter Employee Name: ");
+//         name = sc.nextLine();
+//         System.out.print("Enter Employee Salary: ");
+//         salary = sc.nextInt();
+//     }
+//     public void get_data(){
+//         System.out.println("***************************************");
+//         System.out.println();
+//         System.out.println("Employee Id: "+id);
+//         System.out.println("Employee Name: "+name);
+//         System.out.println("Employee Salary: "+salary);
+//         System.out.println();
+//         System.out.println("***************************************");
+//     }
+// }
+// public class Main{
+//     public static void main(String[] args) {
+//         Employee obj = new Employee();
+//         obj.set_data();
+//         obj.get_data();
+
+        
+//     }
+// }
+//default constructor , null constructor , parmetrized constructor
+
+class Account {
+
+    
+}
+public class Main {
+
+    public static void main(String[] args) {
+        
+    }
+}
+
