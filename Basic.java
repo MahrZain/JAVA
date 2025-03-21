@@ -304,15 +304,11 @@ public static void main(String[] args) {
 
 
 // }
-
-
-Scanner sc =new Scanner(System.in);
-    int var = sc.nextInt();
-    for(int i=1; i<=10;i++){
-        System.out.println(var + " x "+ i +" = "+(var*i));
-    }
-
-
-
+int i=0;
+int num [] = new int[50];
+while (i<50) {
+System.out.print(num[i]);
+    i++;
+}
 }
 }
