@@ -309,68 +309,162 @@ import java.util.*;
 //         }
 //     }
 
-class Movie {
-    private String movie_name[] = { "Ben Ten", "Zombie Nights", "3 Idiots", "Supra Man" };
-    private float ticket_price[] = { 1000, 2000, 3000, 5000 };
-    private int avail_seats[] = { 100, 500, 800, 50 };
+// ---------------------------------------------------------------------------------------------
+//                                       Q#1
 
-    public void get_display_detail() {
-        for (int i = 0; i < movie_name.length; i++) {
-            System.out.println();
-            System.out.println("--------------------------------------------------");
-            System.out.println("Movie Number: " + i);
-            System.out.println("Movie Name: " + movie_name[i]);
-            System.out.println("Movie Ticket Price: Rs." + ticket_price[i]);
-            System.out.println("Available Seats: " + avail_seats[i]);
-            System.out.println();
-            System.out.println("--------------------------------------------------");
+// class Movie {
+//     private String movie_name[] = { "Ben Ten", "Zombie Nights", "3 Idiots", "Supra Man" };
+//     private float ticket_price[] = { 1000, 2000, 3000, 5000 };
+//     private int avail_seats[] = { 100, 500, 800, 50 };
+
+//     public void get_display_detail() {
+//         for (int i = 0; i < movie_name.length; i++) {
+//             System.out.println();
+//             System.out.println("--------------------------------------------------");
+//             System.out.println("Movie Number: " + i);
+//             System.out.println("Movie Name: " + movie_name[i]);
+//             System.out.println("Movie Ticket Price: Rs." + ticket_price[i]);
+//             System.out.println("Available Seats: " + avail_seats[i]);
+//             System.out.println();
+//             System.out.println("--------------------------------------------------");
+//         }
+//     }
+
+//     public void set_book_ticket() {
+//         System.out.println("** Book Your Movie Ticket **");
+//         System.out.println("Choose an Movie");
+//         get_display_detail();
+//         System.out.println("** ** ** ** **");
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Movie Number to Book: ");
+//         int booked_movie = sc.nextInt();
+//         System.out.println("=============================================");
+//         System.out.println(
+//                 movie_name[booked_movie] + " Movie Booked SuccessFully! with Price " + ticket_price[booked_movie]);
+//         System.out.println();
+//     }
+// }
+
+// public class Basic {
+//     public static void menu() {
+//         System.out.println("**************");
+//         System.out.println(" 1 ==> View Movie Details");
+//         System.out.println(" 2 ==> Book a Ticket");
+//         System.out.println(" 3 ==> Exit");
+//         System.out.println("**************");
+//     }
+
+//     public static void main(String[] args) {
+//         int while_break = 0;
+//         Scanner sc = new Scanner(System.in);
+//         Movie mv = new Movie();
+//         do {
+//             menu();
+//             int choice_menu = sc.nextInt();
+//             while_break = choice_menu;
+//             switch (choice_menu) {
+//                 case 1:
+//                     mv.get_display_detail();
+//                     break;
+//                 case 2:
+//                     mv.set_book_ticket();
+//                     break;
+//                 default:
+//                     break;
+
+//             }
+
+//         } while (while_break != 3);
+//     }
+// }
+
+// ---------------------------------------------------------------------------------------------
+//                                       Q#2
+
+class Library{
+    int count=0;
+    String Book_name[] = new String[10];
+    String Book_auther[] = new String[10];
+    int Book_id[] = new int[10];
+
+    public void display(){
+        for (int i = 0; i < 10; i++) {
+            System.out.println("----------------------------------------");
+            System.out.println(Book_id[i]);
+            System.out.println(Book_name[i]);
+            System.out.println(Book_auther[i]);
+            System.out.println("----------------------------------------");
         }
     }
-
-    public void set_book_ticket() {
-        System.out.println("** Book Your Movie Ticket **");
-        System.out.println("Choose an Movie");
-        get_display_detail();
-        System.out.println("** ** ** ** **");
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Movie Number to Book: ");
-        int booked_movie = sc.nextInt();
-        System.out.println("=============================================");
-        System.out.println(
-                movie_name[booked_movie] + " Movie Booked SuccessFully! with Price " + ticket_price[booked_movie]);
-        System.out.println();
+    public void menu(){
+        System.out.println("Choose an Option: ");
+        System.out.println(" 1 ==>  Add a new book (Enter book title, author, and book ID)");
+        System.out.println(" 2 ==>  Display all books");
+        System.out.println(" 3 ==>  Search for a book by ID");
+        System.out.println(" 4 ==>  Exit");
+    }
+    public void add_book(){
+        Scanner sc =new Scanner(System.in);
+        System.out.print("Enter Book Name: ");
+        Book_name[count] = sc.nextLine();
+        System.out.print("Enter Book Auther: ");
+        Book_auther[count] = sc.nextLine();
+        System.out.print("Enter Book ID: ");
+        Book_id[count] = sc.nextInt();
+        count++;
+    }
+    public int search(int id){
+        for(int i=0;i <= Book_id.length;i++){
+            if(Book_id[i] == id){
+                System.out.println("Book Found! ");
+                System.out.println("Book ID: "+Book_id[i]);
+                System.out.println("Book Name: "+Book_name[i]);
+                System.out.println("Book Auther: "+Book_auther[i]);
+                return id;
+            }
+            
+        }
+        return -1;
     }
 }
-
-public class Basic {
-    public static void menu() {
-        System.out.println("**************");
-        System.out.println(" 1 ==> View Movie Details");
-        System.out.println(" 2 ==> Book a Ticket");
-        System.out.println(" 3 ==> Exit");
-        System.out.println("**************");
-    }
-
+public class Basic{
     public static void main(String[] args) {
-        int while_break = 0;
+        int While_Breaker=0,choice;
+        Library lb = new Library();
         Scanner sc = new Scanner(System.in);
-        Movie mv = new Movie();
-        do {
-            menu();
-            int choice_menu = sc.nextInt();
-            while_break = choice_menu;
-            switch (choice_menu) {
-                case 1:
-                    mv.get_display_detail();
-                    break;
-                case 2:
-                    mv.set_book_ticket();
-                    break;
-                default:
-                    break;
+        do{
+            lb.menu();
+            choice = sc.nextInt();
+            While_Breaker=choice;
+            switch(choice){
+                case 1:{
+                        lb.add_book();
+                        break;
 
+                }
+                case 2:{
+                    lb.display();
+                        break;
+
+                }
+                case 3:{
+                        System.out.print("Enter Book ID to Search: ");
+                        int id = sc.nextInt();
+                        id = lb.search(id);
+                        if(id == -1){
+                            System.out.println("Book not Found!");
+                        }
+                        break;
+
+                }
+                case 4:{
+                        break;
+                }
+                default:{
+                    break;
+                }
             }
 
-        } while (while_break != 3);
+        }while(While_Breaker != 4);
     }
 }
