@@ -503,3 +503,22 @@ import java.util.*;
 //         System.out.println(result);
 //     }
 // }
+
+public class Basic{
+    public static int[] reverse(int array[]) {
+        int rev[]=new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            rev[i] = array[array.length-1-i];
+        }
+        return rev;
+        }
+    
+    public static void main(String[] args) {
+        int arr[] = {11,20,30,80,11};
+        int result[] =reverse(arr);
+        for (int i = 0; i < result.length; i++) {
+            System.out.println(result[i]);
+            
+        }
+    }
+}
