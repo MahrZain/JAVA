@@ -30,12 +30,12 @@
 //             while (z > 0) {
 //                 z = z / 10;
 //                 count++;
-                
+
 //             }
 //             if (count == 0) {
 //                 System.out.print(s1+"\t\t\t   ");
 //                 System.out.print("00" + x);
-                
+
 //             }
 //             else if(count == 1){
 //                 System.out.print(s1+"\t\t\t   ");
@@ -56,7 +56,6 @@
 
 //     }
 // }
-
 
 import java.util.*;
 // public class Basic{
@@ -88,13 +87,12 @@ import java.util.*;
 //             System.out.println("Number is Palendrom");
 //         }
 //         else{
-            
+
 //             System.out.println("Number is Not a Palendrom");
 //         }
 
 //     }
 // }
-
 
 // public class Basic{
 //     public static void main(String[] args) {
@@ -114,50 +112,47 @@ import java.util.*;
 //     }
 // }
 
+// public class Basic{
+// public static void hollow(int row,int col) {
+//     for(int i=0;i<=row;i++){
+//         for (int j=0; j <=col; j++) {
+//             if (i==0|j==0|i==row|j==col) {
+//                 System.out.print("*");
+//             }
+//             else{
+//                 System.out.print(" ");
+//             }
+//         }
+//         System.out.println();
+//     }
+// }
+// public static void main(String []args){
+// hollow(10, 10);
+// }
 
-public class Basic{
-    // public static void hollow(int row,int col) {
-    //     for(int i=0;i<=row;i++){
-    //         for (int j=0; j <=col; j++) {
-    //             if (i==0|j==0|i==row|j==col) {
-    //                 System.out.print("*");
-    //             }
-    //             else{
-    //                 System.out.print(" ");
-    //             }
-    //         }
-    //         System.out.println();
-    //     }
-    // }
-    // public static void main(String []args){
-    // hollow(10, 10);
-    // }
+// public static void main(String[] args) {
+//     int n=50;
+//     for (int i=1;i<=n;i++){
+//         for(int j=1;j<=n-i;j++){
+//             System.out.print(" ");
+//         }
+//         for(int j=1;j<=i;j++){
+//             System.out.print(".");
+//         }
+//         System.out.println();
+//     }
+// }
 
-    // public static void main(String[] args) {
-    //     int n=50;
-    //     for (int i=1;i<=n;i++){
-    //         for(int j=1;j<=n-i;j++){
-    //             System.out.print(" ");
-    //         }
-    //         for(int j=1;j<=i;j++){
-    //             System.out.print(".");
-    //         }
-    //         System.out.println();
-    //     }
-    // }
-
-
-    // public static void main(String[] args) {
-    //     int z=1;
-    //     for (int i = 1; i <=5; i++) {
-    //         for (int j = 1; j <= i; j++) {
-    //         System.out.print(z+" ");
-    //         z++;   
-    //         }
-    //         System.out.println();
-    //     }
-    // }
-
+// public static void main(String[] args) {
+//     int z=1;
+//     for (int i = 1; i <=5; i++) {
+//         for (int j = 1; j <= i; j++) {
+//         System.out.print(z+" ");
+//         z++;   
+//         }
+//         System.out.println();
+//     }
+// }
 
 // public static void main(String[] args) {
 //     for (int i = 1; i <=10; i++) {
@@ -207,9 +202,7 @@ public class Basic{
 //             System.out.println();
 //         }
 
-
 // }
-
 
 // public static void main(String[] args) {
 //     int n=25;
@@ -232,11 +225,7 @@ public class Basic{
 //         System.out.println();
 //     }
 
-
 // }
-
-
-
 
 // public static void main(String[] args) {
 //     int n=50;
@@ -257,8 +246,8 @@ public class Basic{
 
 // }
 
-public static void main(String[] args) {
-    
+// public static void main(String[] args) {
+
 // int n=14;
 // for(int i=1;i<=n;i++){
 
@@ -277,14 +266,11 @@ public static void main(String[] args) {
 
 // System.out.println();
 
-
 // }
-
 
 // System.out.println();
 // System.out.println("     Welcome Mehar Zain");
 // System.out.println();
-
 
 // for(int i=n;i>=1;i--){
 
@@ -302,13 +288,89 @@ public static void main(String[] args) {
 
 // System.out.println();
 
+// }
 
 // }
-int i=0;
-int num [] = new int[50];
-while (i<50) {
-System.out.print(num[i]);
-    i++;
+// }
+
+// public class Basic{
+//     public static int high_check(int a[]){
+//         int max=Integer.MIN_VALUE;
+//         for (int i = 0; i <a.length; i++) {
+//             if(a[i] > max){
+//                 max=a[i];
+//             }
+//         }
+//         return max;
+//     }
+//     public static void main(String[] args) {
+//         int array[] = {12,10,1,3,2,5,6,4,8,6,9,0,22,1,4,5,6};   
+//         System.out.print(high_check(array));
+//         }
+//     }
+
+class Movie {
+    private String movie_name[] = { "Ben Ten", "Zombie Nights", "3 Idiots", "Supra Man" };
+    private float ticket_price[] = { 1000, 2000, 3000, 5000 };
+    private int avail_seats[] = { 100, 500, 800, 50 };
+
+    public void get_display_detail() {
+        for (int i = 0; i < movie_name.length; i++) {
+            System.out.println();
+            System.out.println("--------------------------------------------------");
+            System.out.println("Movie Number: " + i);
+            System.out.println("Movie Name: " + movie_name[i]);
+            System.out.println("Movie Ticket Price: Rs." + ticket_price[i]);
+            System.out.println("Available Seats: " + avail_seats[i]);
+            System.out.println();
+            System.out.println("--------------------------------------------------");
+        }
+    }
+
+    public void set_book_ticket() {
+        System.out.println("** Book Your Movie Ticket **");
+        System.out.println("Choose an Movie");
+        get_display_detail();
+        System.out.println("** ** ** ** **");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Movie Number to Book: ");
+        int booked_movie = sc.nextInt();
+        System.out.println("=============================================");
+        System.out.println(
+                movie_name[booked_movie] + " Movie Booked SuccessFully! with Price " + ticket_price[booked_movie]);
+        System.out.println();
+    }
 }
-}
+
+public class Basic {
+    public static void menu() {
+        System.out.println("**************");
+        System.out.println(" 1 ==> View Movie Details");
+        System.out.println(" 2 ==> Book a Ticket");
+        System.out.println(" 3 ==> Exit");
+        System.out.println("**************");
+    }
+
+    public static void main(String[] args) {
+        int while_break = 0;
+        Scanner sc = new Scanner(System.in);
+        Movie mv = new Movie();
+        do {
+            menu();
+            int choice_menu = sc.nextInt();
+            while_break = choice_menu;
+            switch (choice_menu) {
+                case 1:
+                    mv.get_display_detail();
+                    break;
+                case 2:
+                    mv.set_book_ticket();
+                    break;
+                default:
+                    break;
+
+            }
+
+        } while (while_break != 3);
+    }
 }
