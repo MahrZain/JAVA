@@ -381,96 +381,125 @@ import java.util.*;
 // ---------------------------------------------------------------------------------------------
 //                                       Q#2
 
-class Book {
-    int count = 0;
-    String Book_name[] = new String[10];
-    String Book_auther[] = new String[10];
-    int Book_id[] = new int[10];
+// class Book {
+//     int count = 0;
+//     String Book_name[] = new String[10];
+//     String Book_auther[] = new String[10];
+//     int Book_id[] = new int[10];
 
-    public void display() {
-        for (int i = 0; i < 10; i++) {
-            System.out.println("----------------------------------------");
-            System.out.println(Book_id[i]);
-            System.out.println(Book_name[i]);
-            System.out.println(Book_auther[i]);
-            System.out.println("----------------------------------------");
-        }
-    }
+//     public void display() {
+//         for (int i = 0; i < 10; i++) {
+//             System.out.println("----------------------------------------");
+//             System.out.println(Book_id[i]);
+//             System.out.println(Book_name[i]);
+//             System.out.println(Book_auther[i]);
+//             System.out.println("----------------------------------------");
+//         }
+//     }
 
-    public void menu() {
-        System.out.println();
-        System.out.println("Choose an Option: ");
-        System.out.println(" 1 ==>  Add a new book (Enter book title, author, and book ID)");
-        System.out.println(" 2 ==>  Display all books");
-        System.out.println(" 3 ==>  Search for a book by ID");
-        System.out.println(" 4 ==>  Exit");
-        System.out.println();
-    }
+//     public void menu() {
+//         System.out.println();
+//         System.out.println("Choose an Option: ");
+//         System.out.println(" 1 ==>  Add a new book (Enter book title, author, and book ID)");
+//         System.out.println(" 2 ==>  Display all books");
+//         System.out.println(" 3 ==>  Search for a book by ID");
+//         System.out.println(" 4 ==>  Exit");
+//         System.out.println();
+//     }
 
-    public void add_book() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Book Name: ");
-        Book_name[count] = sc.nextLine();
-        System.out.print("Enter Book Auther: ");
-        Book_auther[count] = sc.nextLine();
-        System.out.print("Enter Book ID: ");
-        Book_id[count] = sc.nextInt();
-        count++;
-    }
+//     public void add_book() {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Book Name: ");
+//         Book_name[count] = sc.nextLine();
+//         System.out.print("Enter Book Auther: ");
+//         Book_auther[count] = sc.nextLine();
+//         System.out.print("Enter Book ID: ");
+//         Book_id[count] = sc.nextInt();
+//         count++;
+//     }
 
-    public int search(int id) {
-        for (int i = 0; i < Book_id.length; i++) {
-            if (Book_id[i] == id) {
-                System.out.println("Book Found! ");
-                System.out.println("-----------------------------------------");
-                System.out.println("Book ID: " + Book_id[i]);
-                System.out.println("Book Name: " + Book_name[i]);
-                System.out.println("Book Auther: " + Book_auther[i]);
-                System.out.println("-----------------------------------------");
-                return id;
-            }
+//     public int search(int id) {
+//         for (int i = 0; i < Book_id.length; i++) {
+//             if (Book_id[i] == id) {
+//                 System.out.println("Book Found! ");
+//                 System.out.println("-----------------------------------------");
+//                 System.out.println("Book ID: " + Book_id[i]);
+//                 System.out.println("Book Name: " + Book_name[i]);
+//                 System.out.println("Book Auther: " + Book_auther[i]);
+//                 System.out.println("-----------------------------------------");
+//                 return id;
+//             }
 
-        }
-        System.out.println("Not Found!");
-        return -1;
-    }
-}
+//         }
+//         System.out.println("Not Found!");
+//         return -1;
+//     }
+// }
 
-public class Basic {
-    public static void main(String[] args) {
-        int While_Breaker = 0, choice;
-        Book lb = new Book();
-        Scanner sc = new Scanner(System.in);
-        do {
-            lb.menu();
-            choice = sc.nextInt();
-            While_Breaker = choice;
-            switch (choice) {
-                case 1: {
-                    lb.add_book();
-                    break;
+// public class Basic {
+//     public static void main(String[] args) {
+//         int While_Breaker = 0, choice;
+//         Book lb = new Book();
+//         Scanner sc = new Scanner(System.in);
+//         do {
+//             lb.menu();
+//             choice = sc.nextInt();
+//             While_Breaker = choice;
+//             switch (choice) {
+//                 case 1: {
+//                     lb.add_book();
+//                     break;
 
-                }
-                case 2: {
-                    lb.display();
-                    break;
+//                 }
+//                 case 2: {
+//                     lb.display();
+//                     break;
 
-                }
-                case 3: {
-                    System.out.print("Enter Book ID to Search: ");
-                    int id = sc.nextInt();
-                    id = lb.search(id);
-                    break;
+//                 }
+//                 case 3: {
+//                     System.out.print("Enter Book ID to Search: ");
+//                     int id = sc.nextInt();
+//                     id = lb.search(id);
+//                     break;
 
-                }
-                case 4: {
-                    break;
-                }
-                default: {
-                    break;
-                }
-            }
+//                 }
+//                 case 4: {
+//                     break;
+//                 }
+//                 default: {
+//                     break;
+//                 }
+//             }
 
-        } while (While_Breaker != 4);
-    }
-}
+//         } while (While_Breaker != 4);
+//     }
+// }
+
+// ---------------------------------------------------------------------------------------------
+                                    // ACL
+
+// public class Basic{
+//     public static int binarySearch(int arr[],int key){
+//         int start=0,end=arr.length-1;
+//         while (start<=end) {
+//             int mid = (start+end)/2;
+//             if(arr[mid] == key){
+//                 return mid;
+//             }
+//             if(arr[mid]<key){
+//                 start = mid+1;
+//             }
+//             else{
+//                 end = mid-1;
+//             }
+//                 }   
+//                 return -1;     
+//             }
+//     public static void main(String[] args) {
+//         int array[]={1,2,3,4,5,6,7,8,9,0,10,11,21,23,4,3,5,6,755,67,4,6,55,434,32,1};
+//         Arrays.sort(array);
+//         int key = 32,result;
+//         result = binarySearch(array, key);
+//         System.out.println(result);
+//     }
+// }
