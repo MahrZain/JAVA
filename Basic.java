@@ -331,18 +331,32 @@ import java.util.*;
 //     }
 
 //     public void set_book_ticket() {
-//         System.out.println("** Book Your Movie Ticket **");
-//         System.out.println("Choose an Movie");
-//         get_display_detail();
-//         System.out.println("** ** ** ** **");
 //         Scanner sc = new Scanner(System.in);
+//         System.out.println("\n** Book Your Movie Ticket **");
+//         get_display_detail();
+
 //         System.out.print("Enter Movie Number to Book: ");
 //         int booked_movie = sc.nextInt();
-//         System.out.println("=============================================");
-//         System.out.println(
-//                 movie_name[booked_movie] + " Movie Booked SuccessFully! with Price " + ticket_price[booked_movie]);
-//         System.out.println();
+
+//         // Validate input
+//         if (booked_movie < 0 || booked_movie >= avail_seats.length) {
+//             System.out.println("Invalid number! Please enter a valid movie number.");
+//             System.out.println();
+//             return;
+//         }
+
+//         if (avail_seats[booked_movie] > 0) {
+//             avail_seats[booked_movie]--;
+//             System.out.println("=============================================");
+//             System.out.println(movie_name[booked_movie] + " Movie Booked Successfully!");
+//             System.out.println("Ticket Price: Rs. " + ticket_price[booked_movie]);
+//             System.out.println("Remaining Seats: " + avail_seats[booked_movie]);
+//             System.out.println("=============================================");
+//         } else {
+//             System.out.println("Sorry, No Seats Available for " + movie_name[booked_movie]);
+//         }
 //     }
+
 // }
 
 // public class Basic {
@@ -375,207 +389,249 @@ import java.util.*;
 //             }
 
 //         } while (while_break != 3);
+//         sc.close();
 //     }
 // }
 
 // ---------------------------------------------------------------------------------------------
-//                                       Q#2
+// Q#2
 
 // class Book {
-//     int count = 0;
-//     String Book_name[] = new String[10];
-//     String Book_auther[] = new String[10];
-//     int Book_id[] = new int[10];
+// private int count = 0;
+// private String Book_name[] = new String[10];
+// private String Book_auther[] = new String[10];
+// private int Book_id[] = new int[10];
 
-//     public void display() {
-//         for (int i = 0; i < 10; i++) {
-//             System.out.println("----------------------------------------");
-//             System.out.println(Book_id[i]);
-//             System.out.println(Book_name[i]);
-//             System.out.println(Book_auther[i]);
-//             System.out.println("----------------------------------------");
-//         }
-//     }
+// public void display() {
+// for (int i = 0; i < 10; i++) {
+// System.out.println("----------------------------------------");
+// System.out.println(Book_id[i]);
+// System.out.println(Book_name[i]);
+// System.out.println(Book_auther[i]);
+// System.out.println("----------------------------------------");
+// }
+// }
 
-//     public void menu() {
-//         System.out.println();
-//         System.out.println("Choose an Option: ");
-//         System.out.println(" 1 ==>  Add a new book (Enter book title, author, and book ID)");
-//         System.out.println(" 2 ==>  Display all books");
-//         System.out.println(" 3 ==>  Search for a book by ID");
-//         System.out.println(" 4 ==>  Exit");
-//         System.out.println();
-//     }
+// public void menu() {
+// System.out.println();
+// System.out.println("Choose an Option: ");
+// System.out.println(" 1 ==> Add a new book (Enter book title, author, and book
+// ID)");
+// System.out.println(" 2 ==> Display all books");
+// System.out.println(" 3 ==> Search for a book by ID");
+// System.out.println(" 4 ==> Exit");
+// System.out.println();
+// }
 
-//     public void add_book() {
-//         Scanner sc = new Scanner(System.in);
-//         System.out.print("Enter Book Name: ");
-//         Book_name[count] = sc.nextLine();
-//         System.out.print("Enter Book Auther: ");
-//         Book_auther[count] = sc.nextLine();
-//         System.out.print("Enter Book ID: ");
-//         Book_id[count] = sc.nextInt();
-//         count++;
-//     }
+// public void add_book() {
+// Scanner sc = new Scanner(System.in);
+// System.out.print("Enter Book Name: ");
+// Book_name[count] = sc.nextLine();
+// System.out.print("Enter Book Auther: ");
+// Book_auther[count] = sc.nextLine();
+// System.out.print("Enter Book ID: ");
+// Book_id[count] = sc.nextInt();
+// count++;
+// }
 
-//     public int search(int id) {
-//         for (int i = 0; i < Book_id.length; i++) {
-//             if (Book_id[i] == id) {
-//                 System.out.println("Book Found! ");
-//                 System.out.println("-----------------------------------------");
-//                 System.out.println("Book ID: " + Book_id[i]);
-//                 System.out.println("Book Name: " + Book_name[i]);
-//                 System.out.println("Book Auther: " + Book_auther[i]);
-//                 System.out.println("-----------------------------------------");
-//                 return id;
-//             }
+// public int search(int id) {
+// for (int i = 0; i < Book_id.length; i++) {
+// if (Book_id[i] == id) {
+// System.out.println("Book Found! ");
+// System.out.println("-----------------------------------------");
+// System.out.println("Book ID: " + Book_id[i]);
+// System.out.println("Book Name: " + Book_name[i]);
+// System.out.println("Book Auther: " + Book_auther[i]);
+// System.out.println("-----------------------------------------");
+// return id;
+// }
 
-//         }
-//         System.out.println("Not Found!");
-//         return -1;
-//     }
+// }
+// System.out.println("Not Found!");
+// return -1;
+// }
 // }
 
 // public class Basic {
-//     public static void main(String[] args) {
-//         int While_Breaker = 0, choice;
-//         Book lb = new Book();
-//         Scanner sc = new Scanner(System.in);
-//         do {
-//             lb.menu();
-//             choice = sc.nextInt();
-//             While_Breaker = choice;
-//             switch (choice) {
-//                 case 1: {
-//                     lb.add_book();
-//                     break;
+// public static void main(String[] args) {
+// int While_Breaker = 0, choice;
+// Book lb = new Book();
+// Scanner sc = new Scanner(System.in);
+// do {
+// lb.menu();
+// choice = sc.nextInt();
+// While_Breaker = choice;
+// switch (choice) {
+// case 1: {
+// lb.add_book();
+// break;
 
-//                 }
-//                 case 2: {
-//                     lb.display();
-//                     break;
+// }
+// case 2: {
+// lb.display();
+// break;
 
-//                 }
-//                 case 3: {
-//                     System.out.print("Enter Book ID to Search: ");
-//                     int id = sc.nextInt();
-//                     id = lb.search(id);
-//                     break;
+// }
+// case 3: {
+// System.out.print("Enter Book ID to Search: ");
+// int id = sc.nextInt();
+// id = lb.search(id);
+// break;
 
-//                 }
-//                 case 4: {
-//                     break;
-//                 }
-//                 default: {
-//                     break;
-//                 }
-//             }
+// }
+// case 4: {
+// break;
+// }
+// default: {
+// break;
+// }
+// }
 
-//         } while (While_Breaker != 4);
-//     }
+// } while (While_Breaker != 4);
+// }
 // }
 
 // ---------------------------------------------------------------------------------------------
-                                    // ACL
+// ACL
 
 // public class Basic{
-//     public static int binarySearch(int arr[],int key){
-//         int start=0,end=arr.length-1;
-//         while (start<=end) {
-//             int mid = (start+end)/2;
-//             if(arr[mid] == key){
-//                 return mid;
-//             }
-//             if(arr[mid]<key){
-//                 start = mid+1;
-//             }
-//             else{
-//                 end = mid-1;
-//             }
-//                 }   
-//                 return -1;     
-//             }
-//     public static void main(String[] args) {
-//         int array[]={1,2,3,4,5,6,7,8,9,0,10,11,21,23,4,3,5,6,755,67,4,6,55,434,32,1};
-//         Arrays.sort(array);
-//         int key = 32,result;
-//         result = binarySearch(array, key);
-//         System.out.println(result);
-//     }
+// public static int binarySearch(int arr[],int key){
+// int start=0,end=arr.length-1;
+// while (start<=end) {
+// int mid = (start+end)/2;
+// if(arr[mid] == key){
+// return mid;
+// }
+// if(arr[mid]<key){
+// start = mid+1;
+// }
+// else{
+// end = mid-1;
+// }
+// }
+// return -1;
+// }
+// public static void main(String[] args) {
+// int array[]={1,2,3,4,5,6,7,8,9,0,10,11,21,23,4,3,5,6,755,67,4,6,55,434,32,1};
+// Arrays.sort(array);
+// int key = 32,result;
+// result = binarySearch(array, key);
+// System.out.println(result);
+// }
 // }
 
 // public class Basic{
-//     public static void reverse(int array[]) {
-//         int first=0,last=array.length-1;
-//         while (first<last) {
-//             int temp=0;
-//             temp = array[last];
-//             array[last] = array[first];
-//             array[first] = temp;
-//             first++;
-//             last--;
-//         }
-
-//     }
-    
-//     public static void main(String[] args) {
-//         int arr[] = {11,20,30,80,11};
-//         reverse(arr);
-//         for (int i = 0; i < arr.length; i++) {
-//             System.out.println(arr[i]);
-            
-//         }
-//     }
+// public static void reverse(int array[]) {
+// int first=0,last=array.length-1;
+// while (first<last) {
+// int temp=0;
+// temp = array[last];
+// array[last] = array[first];
+// array[first] = temp;
+// first++;
+// last--;
 // }
 
+// }
 
-// public class Basic{
-//     public static void pair(int arr[]) {
-//         for (int i = 0; i < arr.length; i++) {
-//             for (int j = i+1; j < arr.length; j++) {
-//                 System.out.print("("+arr[i]+","+arr[j]+")"+" ");
-//             }
-//         }
-//     }
-//     public static void main(String[] args) {
-//         int arr[] = {2,4,6,8,10};
-//         pair(arr);
-//     }
+// public static void main(String[] args) {
+// int arr[] = {11,20,30,80,11};
+// reverse(arr);
+// for (int i = 0; i < arr.length; i++) {
+// System.out.println(arr[i]);
+
+// }
+// }
 // }
 
 // public class Basic{
-//     public static void subarray(int arr[]) {
-//         for(int i=0; i<arr.length; i++){
-//             for (int j = i; j <arr.length; j++) {
-//                 for (int k=i; k<=j; k++) {
-//                     System.out.print(arr[k]+" ");
-//                 }
-//                 System.out.println();
-//             }
-//             System.out.println();
-//         }
-//     }
-//     public static void main(String[] args) {
-//         int arr[] = {2,4,6,8,10};
-//         subarray(arr);
-//     }
+// public static void pair(int arr[]) {
+// for (int i = 0; i < arr.length; i++) {
+// for (int j = i+1; j < arr.length; j++) {
+// System.out.print("("+arr[i]+","+arr[j]+")"+" ");
+// }
+// }
+// }
+// public static void main(String[] args) {
+// int arr[] = {2,4,6,8,10};
+// pair(arr);
+// }
 // }
 
+// public class Basic{
+// public static void subarray(int arr[]) {
+// for(int i=0; i<arr.length; i++){
+// for (int j = i; j <arr.length; j++) {
+// for (int k=i; k<=j; k++) {
+// System.out.print(arr[k]+" ");
+// }
+// System.out.println();
+// }
+// System.out.println();
+// }
+// }
+// public static void main(String[] args) {
+// int arr[] = {2,4,6,8,10};
+// subarray(arr);
+// }
+// }
 
+// public class Basic{
+// public static void subarray(int arr[]) {
+// for(int i=0; i<arr.length; i++){
+// for (int j = i; j <arr.length; j++) {
+// for (int k=i; k<=j; k++) {
+// System.out.print(arr[k]+" ");
+// }
+// System.out.println();
+// }
+// System.out.println();
+// }
+// }
+// public static void main(String[] args) {
+// int arr[] = {2,4,6,8,10};
+// subarray(arr);
+// }
+// }
+// ---------------------------------------------------------------------------------------------
+                            // Q#3
+
+class BankAccount{
+    private String accountHolderName[];
+    private int accountNumber[];
+    private int balance[];
+}
 public class Basic{
-    public static void subarray(int arr[]) {
-        for(int i=0; i<arr.length; i++){
-            for (int j = i; j <arr.length; j++) {
-                for (int k=i; k<=j; k++) {
-                    System.out.print(arr[k]+" ");
-                }
-                System.out.println();
-            }
-            System.out.println();
-        }
+    public static void menu() {
+        System.out.println("1 ==> Create an account (Enter name, account number, and initial balance)\n2 ==> Deposit money.\n3 ==> Withdraw money (ensure balance doesn’t go negative).\n4 ==> Check balance.\n5 ==> Exit");
     }
     public static void main(String[] args) {
-        int arr[] = {2,4,6,8,10};
-        subarray(arr);
+        int Choice=0;
+        Scanner sc = new Scanner(System.in);
+        BankAccount b = new BankAccount();
+        do {
+            menu();
+            Choice = sc.nextInt();
+            switch (Choice) {
+                case 1:
+                    
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    
+                    break;
+                case 4:
+                    
+                    break;
+                case 5:
+                    
+                    break;
+            
+                default:
+                    break;
+            }
+        } while (Choice!=5);
     }
 }
