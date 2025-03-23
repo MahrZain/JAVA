@@ -613,10 +613,28 @@ class BankAccount {
         }
     }
 
-    public void printoff() {
-        System.out.println(accountHolderName[0]);
-        System.out.println(accountNumber[0]);
-        System.out.println(balance[0]);
+    public int Withdraw(int id) {
+        for (int i = 0; i < accountNumber.length; i++) {
+            if (id == accountNumber[i]) {
+                System.out.print("Enter Amount To Withdrawl: ");
+                int Amount = sc.nextInt();
+                while (Amount!=0) {
+                    if(Amount >= balance[id]){
+                        balance[id] = balance[id]-Amount;
+                        System.out.println("Payout Successfull: ");
+                        return balance[id];
+                    }
+                    else{
+                        System.out.println("Insufficent Balance!");
+                    }
+                }
+            }
+            else{
+                System.out.println("Invalid ID!");
+                break;
+            }
+        }
+        return -1;
     }
 
     public void deposit() {
@@ -625,6 +643,7 @@ class BankAccount {
         for (int i = 0; i < accountNumber.length; i++) {
             if (id == accountNumber[i]) {
                 System.out.println("Account Found!\nAccount Name: " + accountHolderName[i]);
+                System.out.println("Available Account Balance: " + accountHolderName[i]);
                 System.out.print("Enter Amount To Deposit: ");
                 int deposit = sc.nextInt();
                 if (deposit >= 0) {
@@ -656,6 +675,7 @@ public class Basic {
             switch (Choice) {
                 case 1:
                     System.out.println("Welcome To NullxCoder Bank!\nCreate an Account By Providing Following Details: ");
+                    sc.nextLine();
                     System.out.print("Enter Your Name: ");
                     String name = sc.nextLine();
                     System.out.print("Enter Account Number: ");
@@ -668,7 +688,9 @@ public class Basic {
                     b.deposit();
                     break;
                 case 3:
-                    b.printoff();
+                    System.out.print("Enter Your Account ID: ");
+                    int id = sc.nextInt();
+                    b.Withdraw(id);
                     break;
                 case 4:
 
