@@ -601,12 +601,41 @@ class BankAccount {
     private int accountNumber[] = new int[50];
     private int balance[] = new int[50];
 
+    Scanner sc = new Scanner(System.in);
+
     public void createAccount(String name, int account, int Balance) {
         for (int i = 0; i < 10; i++) {
             accountHolderName[i] = name;
             accountNumber[i] = account;
             balance[i] = Balance;
             System.out.println("Account Created Successfully!");
+            break;
+        }
+    }
+
+    public void printoff() {
+        System.out.println(accountHolderName[0]);
+        System.out.println(accountNumber[0]);
+        System.out.println(balance[0]);
+    }
+
+    public void deposit() {
+        System.out.print("Enter Your Account Id: ");
+        int id = sc.nextInt();
+        for (int i = 0; i < accountNumber.length; i++) {
+            if (id == accountNumber[i]) {
+                System.out.println("Account Found!\nAccount Name: " + accountHolderName[i]);
+                System.out.print("Enter Amount To Deposit: ");
+                int deposit = sc.nextInt();
+                if (deposit >= 0) {
+                    balance[i] = balance[i] + deposit;
+                    System.out.println("Deposit Successfull! New Balance is: " + balance[i]);
+                    break;
+                } else {
+                    System.out.println("No Account Found with that id!");
+                    break;
+                }
+            }
         }
     }
 }
@@ -626,11 +655,9 @@ public class Basic {
             Choice = sc.nextInt();
             switch (Choice) {
                 case 1:
-                    System.out
-                            .println("Welcome To NullxCoder Bank!\nCreate an Account By Providing Following Details: ");
+                    System.out.println("Welcome To NullxCoder Bank!\nCreate an Account By Providing Following Details: ");
                     System.out.print("Enter Your Name: ");
                     String name = sc.nextLine();
-                    sc.nextLine();
                     System.out.print("Enter Account Number: ");
                     int account = sc.nextInt();
                     System.out.print("Enter Account Balance(Intital): ");
@@ -638,10 +665,10 @@ public class Basic {
                     b.createAccount(name, account, balance);
                     break;
                 case 2:
-
+                    b.deposit();
                     break;
                 case 3:
-
+                    b.printoff();
                     break;
                 case 4:
 
