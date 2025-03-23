@@ -504,21 +504,41 @@ import java.util.*;
 //     }
 // }
 
-public class Basic{
-    public static int[] reverse(int array[]) {
-        int rev[]=new int[array.length];
-        for (int i = 0; i < array.length; i++) {
-            rev[i] = array[array.length-1-i];
-        }
-        return rev;
-        }
+// public class Basic{
+//     public static void reverse(int array[]) {
+//         int first=0,last=array.length-1;
+//         while (first<last) {
+//             int temp=0;
+//             temp = array[last];
+//             array[last] = array[first];
+//             array[first] = temp;
+//             first++;
+//             last--;
+//         }
+
+//     }
     
-    public static void main(String[] args) {
-        int arr[] = {11,20,30,80,11};
-        int result[] =reverse(arr);
-        for (int i = 0; i < result.length; i++) {
-            System.out.println(result[i]);
+//     public static void main(String[] args) {
+//         int arr[] = {11,20,30,80,11};
+//         reverse(arr);
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.println(arr[i]);
             
+//         }
+//     }
+// }
+
+
+public class Basic{
+    public static void pair(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i+1; j < arr.length; j++) {
+                System.out.print("("+arr[i]+","+arr[j]+")"+" ");
+            }
         }
+    }
+    public static void main(String[] args) {
+        int arr[] = {2,4,6,8,10};
+        pair(arr);
     }
 }
