@@ -594,19 +594,31 @@ import java.util.*;
 // }
 // }
 // ---------------------------------------------------------------------------------------------
-                            // Q#3
+// Q#3
 
-class BankAccount{
-    private String accountHolderName[];
-    private int accountNumber[];
-    private int balance[];
-}
-public class Basic{
-    public static void menu() {
-        System.out.println("1 ==> Create an account (Enter name, account number, and initial balance)\n2 ==> Deposit money.\n3 ==> Withdraw money (ensure balance doesn’t go negative).\n4 ==> Check balance.\n5 ==> Exit");
+class BankAccount {
+    private String accountHolderName[] = new String[50];
+    private int accountNumber[] = new int[50];
+    private int balance[] = new int[50];
+
+    public void createAccount(String name, int account, int Balance) {
+        for (int i = 0; i < 10; i++) {
+            accountHolderName[i] = name;
+            accountNumber[i] = account;
+            balance[i] = Balance;
+            System.out.println("Account Created Successfully!");
+        }
     }
+}
+
+public class Basic {
+    public static void menu() {
+        System.out.println(
+                "1 ==> Create an account (Enter name, account number, and initial balance)\n2 ==> Deposit money.\n3 ==> Withdraw money (ensure balance doesn’t go negative).\n4 ==> Check balance.\n5 ==> Exit");
+    }
+
     public static void main(String[] args) {
-        int Choice=0;
+        int Choice = 0;
         Scanner sc = new Scanner(System.in);
         BankAccount b = new BankAccount();
         do {
@@ -614,24 +626,33 @@ public class Basic{
             Choice = sc.nextInt();
             switch (Choice) {
                 case 1:
-                    
+                    System.out
+                            .println("Welcome To NullxCoder Bank!\nCreate an Account By Providing Following Details: ");
+                    System.out.print("Enter Your Name: ");
+                    String name = sc.nextLine();
+                    sc.nextLine();
+                    System.out.print("Enter Account Number: ");
+                    int account = sc.nextInt();
+                    System.out.print("Enter Account Balance(Intital): ");
+                    int balance = sc.nextInt();
+                    b.createAccount(name, account, balance);
                     break;
                 case 2:
-                    
+
                     break;
                 case 3:
-                    
+
                     break;
                 case 4:
-                    
+
                     break;
                 case 5:
-                    
+
                     break;
-            
+
                 default:
                     break;
             }
-        } while (Choice!=5);
+        } while (Choice != 5);
     }
 }
