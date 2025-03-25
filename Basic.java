@@ -709,33 +709,37 @@ import java.util.*;
 //     }
 // }
 
+// ---------------------------------------------------------------------------------------------
+                                    // 25 - March - 2025
 
-
-class Book{
-    private int Price;
-    private int id;
-    Scanner sc = new Scanner(System.in);
-    Book(){
-
-    }
-    public void setprice(int price){
+// class Book{
+//     private int price;
+//     private int id;
+//     Scanner sc = new Scanner(System.in);
+//     Book(int a,int b){
         
-    }
-    public void setid(int id){
-
-    }
-}
-    public void getprice(int id){
-
-    }
-    public void getid(int id){
-
-    }
-}
-
-public class Basic{
-    public static void main(String[] args) {
+//         System.out.println(price = b);
+//         System.out.println(id = a);
         
-    }
-}
+//     }
+//     public void setprice(int price){
+        
+//     }
+//     public void setid(int id){
+
+//     }
+// }
+//     public void getprice(int id){
+
+//     }
+//     public void getid(int id){
+
+//     }
+// }
+
+// public class Basic{
+//     public static void main(String[] args) {
+//         Book b =new Book(10, 20);
+//     }
+// }
 
