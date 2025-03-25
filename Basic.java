@@ -743,3 +743,60 @@ import java.util.*;
 //     }
 // }
 
+import java.util.Scanner;
+
+class Quadrilateral {
+    private int side1, side2, side3, side4;
+    private int angle1, angle2;
+
+    public void setSides(int a, int b, int c, int d) {
+        side1 = a;
+        side2 = b;
+        side3 = c;
+        side4 = d;
+    }
+
+    public void setAngles(int ang1, int ang2) {
+        angle1 = ang1;
+        angle2 = ang2;
+    }
+
+    public int getPerimeter() {
+        return side1 + side2 + side3 + side4;
+    }
+
+    public double getArea() {
+        double s = (side1 + side2 + side3 + side4) / 2.0;
+        return Math.sqrt((s - side1) * (s - side2) * (s - side3) * (s - side4));
+    }
+
+    public void displayDetails() {
+        System.out.println("Sides: " + side1 + ", " + side2 + ", " + side3 + ", " + side4);
+        System.out.println("Angles: " + angle1 + "°, " + angle2 + "°");
+        System.out.println("Perimeter: " + getPerimeter());
+        System.out.println("Area: " + getArea());
+    }
+}
+
+public class Basic {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Quadrilateral quad = new Quadrilateral();
+        
+        System.out.print("Enter 4 sides: ");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        int d = scanner.nextInt();
+        quad.setSides(a, b, c, d);
+        
+        System.out.print("Enter 2 opposite angles: ");
+        int ang1 = scanner.nextInt();
+        int ang2 = scanner.nextInt();
+        quad.setAngles(ang1, ang2);
+        
+        quad.displayDetails();
+        scanner.close();
+    }
+}
+
