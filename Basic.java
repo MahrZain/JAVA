@@ -596,112 +596,146 @@ import java.util.*;
 // ---------------------------------------------------------------------------------------------
 // Q#3
 
-class BankAccount {
-    private String accountHolderName[] = new String[50];
-    private int accountNumber[] = new int[50];
-    private int balance[] = new int[50];
+// import java.util.Scanner;
 
+// class BankAccount {
+//     String name;
+//     int accountNumber;
+//     double balance;
+
+
+//     public void createAccount(String n, int acc, double bal) {
+//         name = n;
+//         accountNumber = acc;
+//         balance = bal;
+//         System.out.println("Account Created!");
+//     }
+
+    
+//     public void deposit(double amount) {
+//         balance += amount;
+//         System.out.println("Deposited: " + amount + ". New Balance: " + balance);
+//     }
+
+
+//     public void withdraw(double amount) {
+//         if (balance >= amount) {
+//             balance -= amount;
+//             System.out.println("Withdraw: " + amount + ". New Balance: " + balance);
+//         } else {
+//             System.out.println("Not enough balance!");
+//         }
+//     }
+
+    
+//     public void checkBalance() {
+//         System.out.println("Current Balance: " + balance);
+//     }
+// }
+
+// public class Basic {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         BankAccount account = new BankAccount();
+        
+//         while (true) {
+//             System.out.println("1. Create Account\n2. Deposit\n3. Withdraw\n4. Check Balance\n5. Exit");
+//             int choice = sc.nextInt();
+
+//             if (choice == 1) {
+//                 System.out.print("Enter name: ");
+//                 String name = sc.next();
+//                 System.out.print("Enter account number: ");
+//                 int acc = sc.nextInt();
+//                 System.out.print("Enter initial balance: ");
+//                 double balance = sc.nextDouble();
+//                 account.createAccount(name, acc, balance);
+//             } else if (choice == 2) {
+//                 System.out.print("Enter amount to deposit: ");
+//                 double deposit = sc.nextDouble();
+//                 account.deposit(deposit);
+//             } else if (choice == 3) {
+//                 System.out.print("Enter amount to withdraw: ");
+//                 double withdraw = sc.nextDouble();
+//                 account.withdraw(withdraw);
+//             } else if (choice == 4) {
+//                 account.checkBalance();
+//             } else if (choice == 5) {
+//                 System.out.println("Goodbye!");
+//                 break;
+//             } else {
+//                 System.out.println("Invalid option!");
+//             }
+//         }
+
+//         sc.close();
+//     }
+// }
+
+
+// class quadrilateral{
+//     private int a;
+//     private int b;
+//     private int c;
+//     private int d;
+//     Scanner sc = new Scanner(System.in);
+// public void display(){
+//     System.out.print("Enter 1st Side of Quadrilateral: ");
+//     a = sc.nextInt();
+//     System.out.print("Enter 2nd Side of Quadrilateral: ");
+//     b = sc.nextInt();
+//     System.out.print("Enter 3rd Side of Quadrilateral: ");
+//     c = sc.nextInt();
+//     System.out.print("Enter 4th Side of Quadrilateral: ");
+//     d = sc.nextInt();
+// }
+// public void area(){
+    
+// }
+// }
+// public class Basic {
+//     public static void main(String[] args) {
+//         int start=0,f=0;
+//         int arr[]= {1,-2,6,-1,3};
+//         for(int i=0;i<arr.length;i++){
+//             for(int j=0;j<arr.length;j++){
+//                 for(int k=i;k<=j;k++){
+//                     f+=k;
+//                 }
+//                 System.out.print(f+" ");
+//             }
+//         }
+
+//     }
+// }
+
+
+
+class Book{
+    private int Price;
+    private int id;
     Scanner sc = new Scanner(System.in);
+    Book(){
 
-    public void createAccount(String name, int account, int Balance) {
-        for (int i = 0; i < 10; i++) {
-            accountHolderName[i] = name;
-            accountNumber[i] = account;
-            balance[i] = Balance;
-            System.out.println("Account Created Successfully!");
-            break;
-        }
     }
-
-    public int Withdraw(int id) {
-        for (int i = 0; i < accountNumber.length; i++) {
-            if (id == accountNumber[i]) {
-                System.out.print("Enter Amount To Withdrawl: ");
-                int Amount = sc.nextInt();
-                while (Amount!=0) {
-                    if(Amount >= balance[id]){
-                        balance[id] = balance[id]-Amount;
-                        System.out.println("Payout Successfull: ");
-                        return balance[id];
-                    }
-                    else{
-                        System.out.println("Insufficent Balance!");
-                    }
-                }
-            }
-            else{
-                System.out.println("Invalid ID!");
-                break;
-            }
-        }
-        return -1;
+    public void setprice(int price){
+        
     }
+    public void setid(int id){
 
-    public void deposit() {
-        System.out.print("Enter Your Account Id: ");
-        int id = sc.nextInt();
-        for (int i = 0; i < accountNumber.length; i++) {
-            if (id == accountNumber[i]) {
-                System.out.println("Account Found!\nAccount Name: " + accountHolderName[i]);
-                System.out.println("Available Account Balance: " + accountHolderName[i]);
-                System.out.print("Enter Amount To Deposit: ");
-                int deposit = sc.nextInt();
-                if (deposit >= 0) {
-                    balance[i] = balance[i] + deposit;
-                    System.out.println("Deposit Successfull! New Balance is: " + balance[i]);
-                    break;
-                } else {
-                    System.out.println("No Account Found with that id!");
-                    break;
-                }
-            }
-        }
+    }
+}
+    public void getprice(int id){
+
+    }
+    public void getid(int id){
+
     }
 }
 
-public class Basic {
-    public static void menu() {
-        System.out.println(
-                "1 ==> Create an account (Enter name, account number, and initial balance)\n2 ==> Deposit money.\n3 ==> Withdraw money (ensure balance doesn’t go negative).\n4 ==> Check balance.\n5 ==> Exit");
-    }
-
+public class Basic{
     public static void main(String[] args) {
-        int Choice = 0;
-        Scanner sc = new Scanner(System.in);
-        BankAccount b = new BankAccount();
-        do {
-            menu();
-            Choice = sc.nextInt();
-            switch (Choice) {
-                case 1:
-                    System.out.println("Welcome To NullxCoder Bank!\nCreate an Account By Providing Following Details: ");
-                    sc.nextLine();
-                    System.out.print("Enter Your Name: ");
-                    String name = sc.nextLine();
-                    System.out.print("Enter Account Number: ");
-                    int account = sc.nextInt();
-                    System.out.print("Enter Account Balance(Intital): ");
-                    int balance = sc.nextInt();
-                    b.createAccount(name, account, balance);
-                    break;
-                case 2:
-                    b.deposit();
-                    break;
-                case 3:
-                    System.out.print("Enter Your Account ID: ");
-                    int id = sc.nextInt();
-                    b.Withdraw(id);
-                    break;
-                case 4:
-
-                    break;
-                case 5:
-
-                    break;
-
-                default:
-                    break;
-            }
-        } while (Choice != 5);
+        
     }
 }
+
