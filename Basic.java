@@ -599,10 +599,10 @@ import java.util.*;
 // import java.util.Scanner;
 
 // class BankAccount {
+
 //     String name;
 //     int accountNumber;
 //     double balance;
-
 
 //     public void createAccount(String n, int acc, double bal) {
 //         name = n;
@@ -611,12 +611,10 @@ import java.util.*;
 //         System.out.println("Account Created!");
 //     }
 
-    
 //     public void deposit(double amount) {
 //         balance += amount;
 //         System.out.println("Deposited: " + amount + ". New Balance: " + balance);
 //     }
-
 
 //     public void withdraw(double amount) {
 //         if (balance >= amount) {
@@ -627,7 +625,6 @@ import java.util.*;
 //         }
 //     }
 
-    
 //     public void checkBalance() {
 //         System.out.println("Current Balance: " + balance);
 //     }
@@ -637,7 +634,7 @@ import java.util.*;
 //     public static void main(String[] args) {
 //         Scanner sc = new Scanner(System.in);
 //         BankAccount account = new BankAccount();
-        
+
 //         while (true) {
 //             System.out.println("1. Create Account\n2. Deposit\n3. Withdraw\n4. Check Balance\n5. Exit");
 //             int choice = sc.nextInt();
@@ -669,9 +666,9 @@ import java.util.*;
 //         }
 
 //         sc.close();
+
 //     }
 // }
-
 
 // class quadrilateral{
 //     private int a;
@@ -690,7 +687,7 @@ import java.util.*;
 //     d = sc.nextInt();
 // }
 // public void area(){
-    
+
 // }
 // }
 // public class Basic {
@@ -710,20 +707,20 @@ import java.util.*;
 // }
 
 // ---------------------------------------------------------------------------------------------
-                                    // 25 - March - 2025
+// 25 - March - 2025
 
 // class Book{
 //     private int price;
 //     private int id;
 //     Scanner sc = new Scanner(System.in);
 //     Book(int a,int b){
-        
+
 //         System.out.println(price = b);
 //         System.out.println(id = a);
-        
+
 //     }
 //     public void setprice(int price){
-        
+
 //     }
 //     public void setid(int id){
 
@@ -743,60 +740,101 @@ import java.util.*;
 //     }
 // }
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-class Quadrilateral {
-    private int side1, side2, side3, side4;
-    private int angle1, angle2;
+// class Quadrilateral {
+//     private int side1, side2, side3, side4;
+//     private int angle1, angle2;
 
-    public void setSides(int a, int b, int c, int d) {
-        side1 = a;
-        side2 = b;
-        side3 = c;
-        side4 = d;
+//     public void setSides(int a, int b, int c, int d) {
+//         side1 = a;
+//         side2 = b;
+//         side3 = c;
+//         side4 = d;
+//     }
+
+//     public void setAngles(int ang1, int ang2) {
+//         angle1 = ang1;
+//         angle2 = ang2;
+//     }
+
+//     public int getPerimeter() {
+//         return side1 + side2 + side3 + side4;
+//     }
+
+//     public double getArea() {
+//         double s = (side1 + side2 + side3 + side4) / 2.0;
+//         return Math.sqrt((s - side1) * (s - side2) * (s - side3) * (s - side4));
+//     }
+
+//     public void displayDetails() {
+//         System.out.println("Sides: " + side1 + ", " + side2 + ", " + side3 + ", " + side4);
+//         System.out.println("Angles: " + angle1 + "°, " + angle2 + "°");
+//         System.out.println("Perimeter: " + getPerimeter());
+//         System.out.println("Area: " + getArea());
+//     }
+// }
+
+// public class Basic {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
+//         Quadrilateral quad = new Quadrilateral();
+
+//         System.out.print("Enter 4 sides: ");
+//         int a = scanner.nextInt();
+//         int b = scanner.nextInt();
+//         int c = scanner.nextInt();
+//         int d = scanner.nextInt();
+//         quad.setSides(a, b, c, d);
+
+//         System.out.print("Enter 2 opposite angles: ");
+//         int ang1 = scanner.nextInt();
+//         int ang2 = scanner.nextInt();
+//         quad.setAngles(ang1, ang2);
+
+//         quad.displayDetails();
+//         scanner.close();
+//     }
+// }
+
+class icecream {
+    Scanner sc = new Scanner(System.in);
+    private String size[] = new String[50];
+    private String flavor[] = new String[50];
+    private int price[] = new int[50];
+
+    public String menu_flavour() {
+        System.out.println("1 ==> Chocolate");
+        System.out.println("2 ==> Mango");
+        System.out.println("3 ==> Banana");
+        System.out.print("Enter Your Choice: ");
+        String flavour = sc.nextLine();
+        return flavour;
     }
 
-    public void setAngles(int ang1, int ang2) {
-        angle1 = ang1;
-        angle2 = ang2;
-    }
-
-    public int getPerimeter() {
-        return side1 + side2 + side3 + side4;
-    }
-
-    public double getArea() {
-        double s = (side1 + side2 + side3 + side4) / 2.0;
-        return Math.sqrt((s - side1) * (s - side2) * (s - side3) * (s - side4));
-    }
-
-    public void displayDetails() {
-        System.out.println("Sides: " + side1 + ", " + side2 + ", " + side3 + ", " + side4);
-        System.out.println("Angles: " + angle1 + "°, " + angle2 + "°");
-        System.out.println("Perimeter: " + getPerimeter());
-        System.out.println("Area: " + getArea());
+    public int menu_size() {
+        System.out.println("1 ==> Small");
+        System.out.println("2 ==> Medium");
+        System.out.println("3 ==> Large");
+        System.out.print("Enter Your Choice: ");
+        int size = sc.nextInt();
+        return size;
     }
 }
 
 public class Basic {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Quadrilateral quad = new Quadrilateral();
-        
-        System.out.print("Enter 4 sides: ");
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int c = scanner.nextInt();
-        int d = scanner.nextInt();
-        quad.setSides(a, b, c, d);
-        
-        System.out.print("Enter 2 opposite angles: ");
-        int ang1 = scanner.nextInt();
-        int ang2 = scanner.nextInt();
-        quad.setAngles(ang1, ang2);
-        
-        quad.displayDetails();
-        scanner.close();
+        int size,again=0;
+        String flavour;
+        Scanner sc = new Scanner(System.in);
+        icecream []ar = new icecream[5];
+        // icecream ice = new icecream();
+            do {
+
+                flavour = ice.menu_flavour();
+                size = ice.menu_size();
+
+                
+            } while (again <=5);
     }
 }
-
