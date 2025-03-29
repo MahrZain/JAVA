@@ -797,44 +797,79 @@ import java.util.*;
 //     }
 // }
 
-class icecream {
-    Scanner sc = new Scanner(System.in);
-    private String size[] = new String[50];
-    private String flavor[] = new String[50];
-    private int price[] = new int[50];
+// class icecream {
+//     Scanner sc = new Scanner(System.in);
+//     private String size[] = new String[50];
+//     private String flavor[] = new String[50];
+//     private int price[] = new int[50];
 
-    public String menu_flavour() {
-        System.out.println("1 ==> Chocolate");
-        System.out.println("2 ==> Mango");
-        System.out.println("3 ==> Banana");
-        System.out.print("Enter Your Choice: ");
-        String flavour = sc.nextLine();
-        return flavour;
-    }
+//     public String menu_flavour() {
+//         System.out.println("1 ==> Chocolate");
+//         System.out.println("2 ==> Mango");
+//         System.out.println("3 ==> Banana");
+//         System.out.print("Enter Your Choice: ");
+//         String flavour = sc.nextLine();
+//         return flavour;
+//     }
 
-    public int menu_size() {
-        System.out.println("1 ==> Small");
-        System.out.println("2 ==> Medium");
-        System.out.println("3 ==> Large");
-        System.out.print("Enter Your Choice: ");
-        int size = sc.nextInt();
-        return size;
-    }
-}
+//     public int menu_size() {
+//         System.out.println("1 ==> Small");
+//         System.out.println("2 ==> Medium");
+//         System.out.println("3 ==> Large");
+//         System.out.print("Enter Your Choice: ");
+//         int size = sc.nextInt();
+//         return size;
+//     }
+// }
 
-public class Basic {
-    public static void main(String[] args) {
-        int size,again=0;
-        String flavour;
-        Scanner sc = new Scanner(System.in);
-        icecream []ar = new icecream[5];
-        // icecream ice = new icecream();
-            do {
+// public class Basic {
+//     public static void main(String[] args) {
+//         int size,again=0;
+//         String flavour;
+//         Scanner sc = new Scanner(System.in);
+//         icecream []ar = new icecream[5];
+//         // icecream ice = new icecream();
+//             do {
 
-                flavour = ice.menu_flavour();
-                size = ice.menu_size();
+//                 flavour = ice.menu_flavour();
+//                 size = ice.menu_size();
 
                 
-            } while (again <=5);
+//             } while (again <=5);
+//     }
+// }
+
+
+
+
+// public class Basic {
+
+//     public static void main(String[] args) {
+//         int n=101,count=0,LD=0,pow=0,SUM=0;
+//         while (n!=0) {
+//             LD=n%10;
+//             n=n/10;
+//             LD = LD * (int)Math.pow(2, pow);
+//             SUM += LD;
+//             pow++;
+//         }
+        
+//         System.out.println(SUM);
+
+
+
+//     }
+// }
+public class Basic {
+public static void main(String[] args) {
+    int n=50,bin=0,pow=0;
+    while (n>0) {
+        int rem=n%2;
+        bin = bin +( rem*(int)Math.pow(10, pow));
+        pow++;
+        n/=2;
     }
+    System.out.print(bin);
+}
+    
 }
