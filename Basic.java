@@ -876,4 +876,140 @@ import java.util.*;
 
 
 
+// class Employee{
+// public String name;
+// public int age;
+// public Double salary;
+// }
 
+// public class Basic {
+// public static void main(String[] args) {
+    
+// Employee emp = new Employee();
+// emp.name = "Mehar Zain";
+// emp.age = 20;
+// emp.salary = 100000.0;
+// System.out.println("Name: " + emp.name);
+// System.out.println("Age: " + emp.age);  
+// System.out.println("Salary: " + emp.salary);
+
+// }
+    
+// }
+
+
+// -------------------------------------------------------------------------------
+//                       Q# 2
+
+// class Employee {
+//     private double salary;
+
+// public void setSalary(double s){
+//     salary = s;
+// }
+// public double  getSalary() {
+//     return salary;
+// }
+
+// }
+
+// public class Basic {
+// public static void main(String[] args) {
+//     Employee emp = new Employee();
+//     emp.setSalary(10);
+//     double a = emp.getSalary();
+//     System.out.println(a);
+// }
+    
+// }
+
+// ----------------------------------------------------------------------------------
+//                       Q# 3
+
+// class Product {
+//     private double price;
+
+//     public void setPrice(double p) {
+//         price = p;
+
+//     }
+//     public double getPrice() {
+//         return price;
+//     }
+// }
+// public class Basic {
+// public static void main(String[] args) {
+//     Scanner sc = new Scanner(System.in);
+//     Product p = new Product();
+//     System.out.print("Please input product price: ");
+//     p.setPrice(sc.nextDouble());
+//     p.getPrice();
+//     System.out.println("Product price is: " + p.getPrice());
+
+// }
+    
+// }
+
+
+// --------------------------------------------------------------------------------
+//                       Q# 4
+
+// class Student {
+//     private double marks;
+
+//     public void setMarks(double marks) {
+//         this.marks = marks;
+//     }
+//     public double getMarks() {
+//         return marks;
+//     }
+// }
+// public class Basic {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         Student s = new Student();
+//         System.out.print("Please input student marks: ");
+//         s.setMarks(sc.nextDouble());
+//         System.out.println("Student marks are: " + s.getMarks());
+//     }
+// }
+
+
+// ----------------------------------------------------------------------------------
+//                       Q# 5
+
+// class Student {
+//     private String name ;
+//     private int age;
+
+//     Student(){
+//         name = "Unknown";
+//         age = 0;
+//     }
+//     Student(String name) {
+//         this.name = name;
+//         age = 18;
+//     }
+//     Student(String name, int age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+//     public void display() {
+//         System.out.println("Name: " + name);
+//         System.out.println("Age: " + age);
+//     }
+// }
+// public class Basic {
+
+//     public static void main(String[] args) {
+//         Student s = new Student();
+//         Student s1 = new Student("zain");
+//         Student s2 = new Student("zain", 20);
+//         s.display();
+//         s1.display();
+//         s2.display();
+//     }
+// }
+
+// ----------------------------------------------------------------------------------
+//                       Q# 6
