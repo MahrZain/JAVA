@@ -874,7 +874,8 @@ import java.util.*;
     
 // }
 
-
+// -------------------------------------------------------------------------------------
+//                                      Q # 1
 
 // class Employee{
 // public String name;
@@ -1013,3 +1014,90 @@ import java.util.*;
 
 // ----------------------------------------------------------------------------------
 //                       Q# 6
+
+// import java.util.Scanner;
+
+// class Item {
+//     private String name;
+//     private double price;
+
+//     public Item(String name, double price) {
+//         this.name = name;
+//         this.price = price;
+//     }
+
+//     public void setPrice(double price) {
+//         this.price = price;
+//     }
+
+//     public String getName() {
+//         return name;
+//     }
+
+//     public double getPrice() {
+//         return price;
+//     }
+// }
+
+// public class ShopItemManagementSystem {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
+//         Item item = null;
+//         int choice;
+
+//         do {
+//             System.out.println("\nShop Item Management System");
+//             System.out.println("1. Add a New Item");
+//             System.out.println("2. Update Item Price");
+//             System.out.println("3. View Item Details");
+//             System.out.println("4. Exit");
+//             System.out.print("Enter your choice: ");
+//             choice = scanner.nextInt();
+//             scanner.nextLine();
+
+//             switch (choice) {
+//                 case 1:
+//                     System.out.print("Enter item name: ");
+//                     String name = scanner.nextLine();
+//                     System.out.print("Enter item price: ");
+//                     double price = scanner.nextDouble();
+//                     item = new Item(name, price);
+//                     System.out.println("Item added successfully.");
+//                     break;
+
+//                 case 2:
+//                     if (item != null) {
+//                         System.out.print("Enter new price: ");
+//                         double newPrice = scanner.nextDouble();
+//                         item.setPrice(newPrice);
+//                         System.out.println("Price updated successfully.");
+//                     } else {
+//                         System.out.println("No item found. Please add an item first.");
+//                     }
+//                     break;
+
+//                 case 3:
+//                     if (item != null) {
+//                         System.out.println("Item Name: " + item.getName());
+//                         System.out.println("Item Price: " + item.getPrice());
+//                     } else {
+//                         System.out.println("No item found. Please add an item first.");
+//                     }
+//                     break;
+
+//                 case 4:
+//                     System.out.println("Exiting the program.");
+//                     break;
+
+//                 default:
+//                     System.out.println("Invalid choice. Try again.");
+//             }
+//         } while (choice != 4);
+
+//         scanner.close();
+//     }
+// }
+
+// ----------------------------------------------------------------------------------
+//                       Q# 7
+
