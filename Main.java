@@ -375,13 +375,63 @@ import java.util.*;
 //default constructor , null constructor , parmetrized constructor
 
 
-public class Main {
 
-    public static void main(String[] args) {
-        int arr[]={1,2,3,4,5,6,7,8,9,10,100};
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr.length);
+import java.util.*;
+class Student{
+    private String name;
+    private int roll_no;
+    private double score1;
+    private double score2;
+    private double total;
+
+
+    public void total(){
+        total = score1 + score2;
+    }
+    public void input(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Student One Name:");
+        name = sc.nextLine();
+        System.out.print("Enter Student One Roll No:");
+        roll_no = sc.nextInt();
+        System.out.print("Enter Student One Score-1:");
+        score1 = sc.nextInt();
+        System.out.print("Enter Student One Score-2:");
+        score2 = sc.nextInt();
+    }
+    public void display(){
+    
+        System.out.println("-------------------------------------------------");
+        System.out.println("Student Two Name: "+name);
+        System.out.println("Student Two Roll No: "+roll_no);
+        System.out.println("Student Two Total Marks: "+total);
+        System.out.println("-------------------------------------------------");
+    }
+    public void max(Student s1){
+        if (this.total > s1.total){
+            System.out.println(this.name+" have Maximum Marks");
+            System.out.println(s1.name+" have Minimum Marks");
+            
+
+        } else{
+            System.out.println(s1.name+"have Maximum Marks");
+            System.out.println(this.name+"have Minimum Marks");
         }
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+        s1.input();
+        s1.total();
+        s1.display();
+        Student s2 = new Student();
+        s2.input();
+        s2.total();
+        s2.display();
+        s1.max(s2);
+
     }
 }
 
