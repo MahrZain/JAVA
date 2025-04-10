@@ -255,6 +255,7 @@ import java.util.*;
 // }
 
 // class StudentRecord{
+
 //     int StudentId;
 //     String StudentName;
 //     int Mark_1;
@@ -287,33 +288,30 @@ import java.util.*;
 //         System.out.println("Student Average: "+avg());
 //     }
 
-
-
-
 // }
 // public class Main{
-    // public static void main(String[] args) {
-        // for (int i = 0; i <=3; i++) {
-        //     StudentRecord s[i] = new StudentRecord();
-        //     s[i].Input();
-        //     System.out.println("-----------------------------------");
-        //     s[i].display();
-        //     System.out.println("-----------------------------------");
-        //     }
+// public static void main(String[] args) {
+// for (int i = 0; i <=3; i++) {
+//     StudentRecord s[i] = new StudentRecord();
+//     s[i].Input();
+//     System.out.println("-----------------------------------");
+//     s[i].display();
+//     System.out.println("-----------------------------------");
+//     }
 
-        // StudentRecord s1 = new StudentRecord();
-        // StudentRecord s2 = new StudentRecord();
-        // StudentRecord s3 = new StudentRecord();
-        //     s1.Input();
-        //     s1.display();
-        //     System.out.println("--------------------------");
-        //     s2.Input();
-        //     s2.display();
-        //     System.out.println("--------------------------");
-        //     s3.Input();
-        //     s3.display();
-        //     System.out.println("--------------------------");
+// StudentRecord s1 = new StudentRecord();
 
+// StudentRecord s2 = new StudentRecord();
+// StudentRecord s3 = new StudentRecord();
+//     s1.Input();
+//     s1.display();
+//     System.out.println("--------------------------");
+//     s2.Input();
+//     s2.display();
+//     System.out.println("--------------------------");
+//     s3.Input();
+//     s3.display();
+//     System.out.println("--------------------------");
 
 //     }
 // }
@@ -369,12 +367,9 @@ import java.util.*;
 //         obj.set_data();
 //         obj.get_data();
 
-        
 //     }
 // }
 //default constructor , null constructor , parmetrized constructor
-
-
 
 // import java.util.*;
 // class Student{
@@ -383,7 +378,6 @@ import java.util.*;
 //     private double score1;
 //     private double score2;
 //     private double total;
-
 
 //     public void total(){
 //         total = score1 + score2;
@@ -400,7 +394,7 @@ import java.util.*;
 //         score2 = sc.nextInt();
 //     }
 //     public void display(){
-    
+
 //         System.out.println("-------------------------------------------------");
 //         System.out.println("Student Two Name: "+name);
 //         System.out.println("Student Two Roll No: "+roll_no);
@@ -411,7 +405,6 @@ import java.util.*;
 //         if (this.total > s1.total){
 //             System.out.println(this.name+" have Maximum Marks");
 //             System.out.println(s1.name+" have Minimum Marks");
-            
 
 //         } else{
 //             System.out.println(s1.name+"have Maximum Marks");
@@ -435,10 +428,68 @@ import java.util.*;
 //     }
 // }
 
+class Patient {
 
+    private String name;
+    private int id;
+    private String disease;
 
-public class Main{
+    public void setDetail() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Patient Name: ");
+        name = sc.nextLine();
+        System.out.print("Enter Patient ID: ");
+        id = sc.nextInt();
+        sc.nextLine();
+        System.out.print("Enter Patient Disease: ");
+        disease = sc.nextLine();
+
+    }
+
+    public void showDetail() {
+        System.out.println("Patient Name: " + name);
+        System.out.println("Patient ID: " + id);
+        System.out.println("Patient Disease: " + disease);
+    }
+
+    public void menu() {
+        System.out.println();
+        System.out.println("1 ==> Add Patient record");
+        System.out.println("2 ==> Display All Patient record");
+        System.out.println("3 ==> Exit");
+        System.out.println();
+    }
+}
+
+public class Main {
     public static void main(String[] args) {
+        int i=0;
+        Patient p = new Patient();
+        Scanner sc = new Scanner(System.in);
+        Patient[] arr = new Patient[5];
         
+        int choice;
+        do{
+            p.menu();
+            choice = sc.nextInt();
+        if( choice == 1){
+            arr[i] = new Patient(); 
+            arr[i].setDetail();
+            i++;
+        }
+        else if(choice ==2){
+            for (int j = 0; j < i; j++) {
+                arr[j].showDetail();
+                System.out.println("------------------------------------");
+            }
+        }
+        else if(choice == 3){
+            System.out.println("Exit!");
+        }
+        else{
+            System.out.println("Invalid!");
+        }
+    
+    }while(choice != 3);
     }
 }
