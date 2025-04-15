@@ -428,82 +428,170 @@ import java.util.*;
 //     }
 // }
 import java.util.*;
-class Patient {
+// class Patient {
 
-    private String name;
-    private int age;
-    private String disease;
+//     private String name;
+//     private int age;
+//     private String disease;
 
-    public void setDetail() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Patient Name: ");
-        name = sc.nextLine();
-        System.out.print("Enter Patient Age: ");
-        age = sc.nextInt();
-        sc.nextLine();
-        System.out.print("Enter Patient Disease: ");
-        disease = sc.nextLine();
+//     public void setDetail() {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Patient Name: ");
+//         name = sc.nextLine();
+//         System.out.print("Enter Patient Age: ");
+//         age = sc.nextInt();
+//         sc.nextLine();
+//         System.out.print("Enter Patient Disease: ");
+//         disease = sc.nextLine();
 
-    }
+//     }
 
-    public void showDetail() {
-        System.out.println("Patient Name: " + name);
-        System.out.println("Patient AGE: " + age);
-        System.out.println("Patient Disease: " + disease);
-    }
+//     public void showDetail() {
+//         System.out.println("Patient Name: " + name);
+//         System.out.println("Patient AGE: " + age);
+//         System.out.println("Patient Disease: " + disease);
+//     }
 
-    public void menu() {
-        System.out.println();
-        System.out.println("1 ==> Add Patient record");
-        System.out.println("2 ==> Display All Patient record");
-        System.out.println("3 ==> Patient with Higest Age");
-        System.out.println("4 ==> Exit");
-        System.out.println();
-    }
+//     public void menu() {
+//         System.out.println();
+//         System.out.println("1 ==> Add Patient record");
+//         System.out.println("2 ==> Display All Patient record");
+//         System.out.println("3 ==> Patient with Higest Age");
+//         System.out.println("4 ==> Exit");
+//         System.out.println();
+//     }
 
-    public void high_age(Patient[] arr) {
-        if (arr == null || arr.length == 0) {
-            System.out.println("No patient records available.");
-            return;
-        }
-        int max = arr[0].age;
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] != null && arr[i].age > max) {
-                max = arr[i].age;
+//     public void high_age(Patient[] arr) {
+//         if (arr == null || arr.length == 0) {
+//             System.out.println("No patient records available.");
+//             return;
+//         }
+//         int max = arr[0].age;
+//         for (int i = 1; i < arr.length; i++) {
+//             if (arr[i] != null && arr[i].age > max) {
+//                 max = arr[i].age;
+//             }
+//         }
+//         System.out.println("Highest Age of Patient is: " + max);
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         int i = 0;
+//         Patient p = new Patient();
+//         Scanner sc = new Scanner(System.in);
+//         Patient[] arr = new Patient[5];
+
+//         int choice;
+//         do {
+//             p.menu();
+//             choice = sc.nextInt();
+//             if (choice == 1) {
+//                 arr[i] = new Patient();
+//                 arr[i].setDetail();
+//                 i++;
+//             } else if (choice == 2) {
+//                 for (int j = 0; j < i; j++) {
+//                     arr[j].showDetail();
+//                     System.out.println("------------------------------------");
+//                 }
+//             } else if (choice == 3) {
+//                 p.high_age(arr);
+//             } else if (choice == 4) {
+//                 System.out.println("Exit!");
+//             } else {
+//                 System.out.println("Invalid!");
+//             }
+
+//         } while (choice != 3);
+//     }
+// }
+
+// class Employee{
+//     private String name;
+//     private int salary;
+//     private int age;
+
+//     Employee(){
+//         name = "Ali";
+//         age=19;
+//         salary=100000;
+
+//     }
+//     public  void display_info(){
+//         System.out.println("Employee Name: "+name);
+//         System.out.println("Employee Salary: "+salary);
+//         System.out.println("Employee age: "+age);
+//     }
+
+//     public  void cal_bonus(){
+//         int b_salary = (int)(salary+(salary*0.1));
+//         System.out.println("Salary with 10% Bonus: "+b_salary);
+//     }
+// }
+
+// public class Main{
+//     public static void main(String[] args) {
+
+//         Employee e = new Employee();
+//         e.display_info();
+//         e.cal_bonus();
+//     }
+// }
+class arrayOperation {
+
+    public static int[] min_max(int array[]) {
+        int min_max [] = new int[2];
+        int min = array[0];
+        int max = array[0];
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+            if (array[i] > max) {
+                max = array[i];
             }
         }
-        System.out.println("Highest Age of Patient is: " + max);
+        min_max[0] = min;
+        min_max[1] = max;
+
+
+        return min_max;
+    }
+
+    public static void odd(int array[]) {
+        System.out.print("Odd Values Are: ");
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 != 0) {
+                System.out.print(array[i] + " , " + " ");
+            }
+        }
+    }
+
+    public static void even(int array[]) {
+        System.out.print("Even Values Are: ");
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                System.out.print(array[i] + " , " + " ");
+            }
+        }
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        int i = 0;
-        Patient p = new Patient();
-        Scanner sc = new Scanner(System.in);
-        Patient[] arr = new Patient[5];
-
-        int choice;
-        do {
-            p.menu();
-            choice = sc.nextInt();
-            if (choice == 1) {
-                arr[i] = new Patient();
-                arr[i].setDetail();
-                i++;
-            } else if (choice == 2) {
-                for (int j = 0; j < i; j++) {
-                    arr[j].showDetail();
-                    System.out.println("------------------------------------");
-                }
-            } else if (choice == 3) {
-                p.high_age(arr);
-            } else if (choice == 4) {
-                System.out.println("Exit!");
-            } else {
-                System.out.println("Invalid!");
-            }
-
-        } while (choice != 3);
+        int b[] = new int[2];
+        int a[] = { 1, 2, 6, 7, 5, 8, 9, 10, 4, 7, 8, 3, 5, 2, 0, 6, 1, 4, 64, 6 };
+        b = arrayOperation.min_max(a);
+        System.out.println();
+        System.out.println("Minimum: "+b[0]);
+        System.out.println("Maximum: "+b[1]);
+        System.out.println();
+        arrayOperation.even(a);
+        System.out.println();
+        arrayOperation.odd(a);
+        System.out.println();
     }
 }
