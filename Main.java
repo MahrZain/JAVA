@@ -539,59 +539,182 @@ import java.util.*;
 //         e.cal_bonus();
 //     }
 // }
-class arrayOperation {
+// class arrayOperation {
 
-    public static int[] min_max(int array[]) {
-        int min_max [] = new int[2];
-        int min = array[0];
-        int max = array[0];
+//     public static int[] min_max(int array[]) {
+//         int min_max [] = new int[2];
+//         int min = array[0];
+//         int max = array[0];
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < min) {
-                min = array[i];
-            }
-            if (array[i] > max) {
-                max = array[i];
-            }
-        }
-        min_max[0] = min;
-        min_max[1] = max;
+//         for (int i = 0; i < array.length; i++) {
+//             if (array[i] < min) {
+//                 min = array[i];
+//             }
+//             if (array[i] > max) {
+//                 max = array[i];
+//             }
+//         }
+//         min_max[0] = min;
+//         min_max[1] = max;
+
+//         return min_max;
+//     }
+
+//     public static void odd(int array[]) {
+//         System.out.print("Odd Values Are: ");
+//         for (int i = 0; i < array.length; i++) {
+//             if (array[i] % 2 != 0) {
+//                 System.out.print(array[i] + " , " + " ");
+//             }
+//         }
+//     }
+
+//     public static void even(int array[]) {
+//         System.out.print("Even Values Are: ");
+//         for (int i = 0; i < array.length; i++) {
+//             if (array[i] % 2 == 0) {
+//                 System.out.print(array[i] + " , " + " ");
+//             }
+//         }
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         int b[] = new int[2];
+//         int a[] = { 1, 2, 6, 7, 5, 8, 9, 10, 4, 7, 8, 3, 5, 2, 0, 6, 1, 4, 64, 6 };
+//         b = arrayOperation.min_max(a);
+//         System.out.println();
+//         System.out.println("Minimum: "+b[0]);
+//         System.out.println("Maximum: "+b[1]);
+//         System.out.println();
+//         arrayOperation.even(a);
+//         System.out.println();
+//         arrayOperation.odd(a);
+//         System.out.println();
+//     }
+// }
+// class Clothes {
+//     private String Type_Shirt;
+//     private String Type_Size;
+//     private String Tyoe_Color;
+
+//     public String get_size() {
+//         int return_value;
+//         System.out.print("Select The Size of Shirts\n1 ==> small\n2 ==> medium\3 ==> large");
+//         int size_choice = sc.nextInt();
+//         if (size_choice == 1) {
+//             return_value = "Small";
+//         } else if (size_choice == 2) {
+//             return_value = "Medium";
+
+//         } else if (size_choice == 3) {
+
+//             return_value = "Large";
+//         }
+//         return return_value;
+
+//     }
+
+//     public void get_color() {
+//         int return_value;
+//         System.out.println("Select Color\n1 ==> Red\n2 ==> Green\n3 ==> Blue");
+//         int color_choice = sc.nextInt();
+//         if (color_choice == 1) {
+//             return_value = "Red";
+//         } else if (color_choice == 2) {
+//             return_value = "Green";
+
+//         } else if (color_choice == 3) {
+
+//             return_value = "Blue";
+//         }
+//         return return_value;
+
+//     }
+
+//     public void get_type(){
+//         int return_value;
+//         System.out.print("Select Shirt Type\n1 ==> T-Shirt\n2 ==> Shirt ");
+//         int type_choice = sc.nextInt();
+//         if(type_choice ==1){
+//             return_value = "Red";
+//         }
+//         else if(type_choice == 2){
+//             return_value = "Green";
+            
+//         }
+//         else if(type_choice == 3){
+            
+//             return_value = "Blue";
+//         }
+//         return return_value;
+
+//     }
+
+//     public void add_cloth() {
+//         Scanner sc = new Scanner(System.in);
+//         if (cloth_count <= 10) {
+//             System.out.println("Welcome To The Clother Shop");
+
+//         } else {
+//             System.out.println("You have Reaced The maximum Limited of adding Clothes!");
+//         }
+
+//     }
+
+//     public void menu() {
+//         System.out.println("1 ==> Add CLothes");
+//         System.out.println("2 ==> View Only Green Clothes");
+//         System.out.println("3 ==> Exit");
+//         System.out.print("Enter Your Choice: ");
+//     }
+
+//     class Main {
+//         public static void main(String[] args) {
+//             int count = 0;
+//             String size, color, type;
+//             Scanner sc = new Scanner(System.in);
+//             Clothes c = new Clothes();
+//             while (count <= 10) {
+//                 c[count].menu();
+//                 int choice = sc.nextInt();
+//                 switch (choice) {
+//                     case 1: {
+//                         c[count].get_type();
+//                         c[count].get_color();
+//                         c[count].get_size();
+//                         break;
+//                     }
+//                     case 2: {
+
+//                         break;
+//                     }
+//                     case 3: {
+//                         System.out.println("Exiting....");
+//                         break;
+//                     }
+//                 }
+
+//             }
+
+//         }
+//     }
+
+// }
 
 
-        return min_max;
-    }
 
-    public static void odd(int array[]) {
-        System.out.print("Odd Values Are: ");
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 != 0) {
-                System.out.print(array[i] + " , " + " ");
-            }
-        }
-    }
+// public class Main{
+//     public static void main(String []a){
+//         for(int i=0;i<=15;i++){
+//             for(int j=0;j<=i;j++){
+//                 System.out.print("-");
+//             }
+//             System.out.println();
+//         }
 
-    public static void even(int array[]) {
-        System.out.print("Even Values Are: ");
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 == 0) {
-                System.out.print(array[i] + " , " + " ");
-            }
-        }
-    }
-}
 
-public class Main {
-    public static void main(String[] args) {
-        int b[] = new int[2];
-        int a[] = { 1, 2, 6, 7, 5, 8, 9, 10, 4, 7, 8, 3, 5, 2, 0, 6, 1, 4, 64, 6 };
-        b = arrayOperation.min_max(a);
-        System.out.println();
-        System.out.println("Minimum: "+b[0]);
-        System.out.println("Maximum: "+b[1]);
-        System.out.println();
-        arrayOperation.even(a);
-        System.out.println();
-        arrayOperation.odd(a);
-        System.out.println();
-    }
-}
+
+//     }
+// }
