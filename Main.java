@@ -642,10 +642,10 @@ import java.util.*;
 //         }
 //         else if(type_choice == 2){
 //             return_value = "Green";
-            
+
 //         }
 //         else if(type_choice == 3){
-            
+
 //             return_value = "Blue";
 //         }
 //         return return_value;
@@ -703,8 +703,6 @@ import java.util.*;
 
 // }
 
-
-
 // public class Main{
 //     public static void main(String []a){
 //         for(int i=0;i<=15;i++){
@@ -714,7 +712,66 @@ import java.util.*;
 //             System.out.println();
 //         }
 
-
-
 //     }
 // }
+
+// class Person {
+//     protected String name;
+//     protected int age;
+
+//     Person(String name, int age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
+
+// class Student extends Person {
+//     int roll_no;
+//     String section;
+
+//     Student(String name, int age, int roll_no, String section) {
+//         super(name, age);
+//         this.roll_no = roll_no;
+//         this.section = section;
+//     }
+
+//     public void display() {
+//         System.out.println("Name: " + name);
+//         System.out.println("Age: " + age);
+//         System.out.println("Roll No: " + roll_no);
+//         System.out.println("Section: " + section);
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Student s = new Student("Zain", 19, 1, "A");
+//         s.display();
+//     }
+// }
+
+// class person{
+
+//     protected String name;
+//     protected int age;
+
+
+//     person(String name, int age){     
+//         System.out.println(this.name = name);
+//         System.out.println(this.age = age);
+//     }
+// }
+// class student extends person{
+//     student(String name, int age){
+//         super(name,age);
+//     }
+// }
+
+// public class Main {
+// public static void main(String[] args) {
+//     student s = new student("Zain", 19);
+// }
+    
+// }
+
+
