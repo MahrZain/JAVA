@@ -755,7 +755,6 @@ import java.util.*;
 //     protected String name;
 //     protected int age;
 
-
 //     person(String name, int age){     
 //         System.out.println(this.name = name);
 //         System.out.println(this.age = age);
@@ -771,7 +770,55 @@ import java.util.*;
 // public static void main(String[] args) {
 //     student s = new student("Zain", 19);
 // }
-    
+
 // }
 
+// class Test {
+//     protected String name;
+//     public Test(String name){
+//         this.name = name;
+//     }
+// }
 
+// class Student extends Test {
+//     Student(String name){
+//         super(name);
+//         System.out.println("Student Name: "+name);
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] a) {
+
+//         Student t = new Student("Zain");
+//         }
+// }
+
+class Person{
+    String name; 
+    int age;
+    Person(String name, int age){
+
+        this.name=name;
+        this.age=age;
+        System.out.println("Public constructor Called: "+name+" and Age: "+age);
+    }
+}
+class Employee extends Person{
+
+    Employee(String name , int age){
+        super(name , age);
+        this.age=age;
+        System.out.println("Employee Constructor Called!"+age);
+    }
+    public void work(){
+        System.out.println(age+" is Working");
+    }
+}
+
+public class Main{
+    public static void main(String[]a){
+        Employee e = new Employee("Ali",19);
+        e.work();
+    }
+}
