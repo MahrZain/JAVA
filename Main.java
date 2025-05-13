@@ -794,31 +794,135 @@ import java.util.*;
 //         }
 // }
 
-class Person{
-    String name; 
-    int age;
-    Person(String name, int age){
+// class Person{
+//     String name; 
+//     int age;
+//     Person(String name, int age){
 
-        this.name=name;
-        this.age=age;
-        System.out.println("Public constructor Called: "+name+" and Age: "+age);
-    }
-}
-class Employee extends Person{
+//         this.name=name;
+//         this.age=age;
+//         System.out.println("Public constructor Called: "+name+" and Age: "+age);
+//     }
+// }
+// class Employee extends Person{
 
-    Employee(String name , int age){
-        super(name , age);
-        this.age=age;
-        System.out.println("Employee Constructor Called!"+age);
-    }
-    public void work(){
-        System.out.println(age+" is Working");
-    }
-}
+//     Employee(String name , int age){
+//         super(name , age);
+//         this.age=age;
+//         System.out.println("Employee Constructor Called!"+age);
+//     }
+//     public void work(){
+//         System.out.println(age+" is Working");
+//     }
+// }
 
-public class Main{
-    public static void main(String[]a){
-        Employee e = new Employee("Ali",19);
-        e.work();
-    }
-}
+// public class Main{
+//     public static void main(String[]a){
+//         Employee e = new Employee("Ali",19);
+//         e.work();
+//     }
+// }
+
+// class Bank {
+//     String bankName;
+//     String branch;
+
+//     Bank(String bankName, String branch) {
+//         this.bankName = bankName;
+//         this.branch = branch;
+//     }
+
+//     public void displayinfo() {
+//         System.out.println("Bank Name: " + bankName);
+//         System.out.println("Branch Name: " + branch);
+//     }
+// }
+
+// class Account extends Bank {
+//     int accountNumber = 10;
+//     String accountHolder = "Ali";
+//     double balance = 1000.0;
+
+//     Account(String bankName, String branch) {
+//         super(bankName, branch);
+//         super.displayinfo();
+//     }
+
+//     public void displayinfo() {
+//         // super.displayinfo();
+//         System.out.println("Account Number: " + accountNumber);
+//         System.out.println("Account Holder: " + accountHolder);
+//         System.out.println("Account Balance: " + balance);
+//     }
+
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Account a = new Account("Bank Alfalah", "Islamabad");
+//         a.displayinfo();
+//     }
+// }
+
+// class Staff {
+//     String name;
+//     int staff_id;
+
+//     public void displayDetails() {
+//         System.out.println("Staff Name: " + name);
+//         System.out.println("Staff ID: " + staff_id);
+//     }
+// }
+
+// class TeachingStaff extends Staff {
+//     String department;
+
+//     public void displayTeachingDetails() {
+//         System.out.println("Department: " + department);
+//     }
+// }
+
+// class Professor extends TeachingStaff {
+//     String specialization;
+
+//     public void displayProfessoinfo() {
+//         System.out.println("Specialization: " + specialization);
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+
+//         Professor p = new Professor();
+//         p.name = "Ali";
+//         p.staff_id = 1;
+//         p.department = "Computer Science";
+//         p.specialization = "Data Science";
+
+//         p.displayDetails();
+//         p.displayTeachingDetails();
+//         p.displayProfessoinfo();
+//         System.out.println("-------------------------------------------------");
+
+//     }
+// }
+
+// class Animal{
+//     void sound(){
+//         System.out.println("Animal Sounds");
+//     }
+// }
+// class Dog extends Animal{
+//     @Override void sound(){
+//         System.out.println("Dog Sounds");
+
+//     }
+// }
+// public class Main{
+//     public static void main(String[] args) {
+//         Animal a = new Animal();
+//         Dog d = new Dog();
+//         a.sound();
+//         d.sound();
+//     }
+// }
