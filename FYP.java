@@ -92,7 +92,7 @@ public class FYP {
     public static void main(String[] args) {
         int option = 0;
         Scanner scanner = new Scanner(System.in);
-        List<Accounts> account = new ArrayList<>();
+        // List<Accounts> account = new ArrayList<>();
         System.out.println("Hello World! This is my Java Web Hosting Management System.");
         do {
             Accounts.displayMenu();
