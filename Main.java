@@ -928,48 +928,60 @@ import java.util.*;
 // }
 
 class Course {
-    String coursename;
-    int duration;
-    int fee;
+    protected String coursename;
+    protected int duration;
+    protected int fee;
+
+    Course(String coursename, int duration, int fee) {
+        this.coursename = coursename;
+        this.duration = duration;
+        this.fee = fee;
+    }
 
     void showDetails() {
-        System.out.println("Java, python, Django, .Net Core");
+        System.out.println("Course Name: " + coursename);
+        System.out.println("Duration Months: " + duration);
+        System.out.println("Fee: " + fee);
     }
 
-    void enroll() {
-        System.out.println("Students Enrolled: ");
-    }
 }
 
 class programmingCourse extends Course {
-    String languageUsed = "Java, C++, python";
+    private String languageUsed;
+
+    programmingCourse(String name, int duration, int fee, String languageUsed) {
+        super(name, duration, fee);
+        this.languageUsed = languageUsed;
+    }
 
     void showDetails() {
+        super.showDetails();
         System.out.println("Programming Course: " + languageUsed);
     }
 
-    void enroll() {
-        System.out.println("Students Enrolled: 20");
-    }
 }
 
 class designCourse extends Course {
+    String softwareUsed;
+
+    designCourse(String name, int duration, int fee, String softwareUsed) {
+        super(name, duration, fee);
+        this.softwareUsed = softwareUsed;
+    }
+
     void showDetails() {
-        String softwareUsed = "Figma Express and Adobe Creative Cloud";
+        super.showDetails();
         System.out.println("Designe Course: " + softwareUsed);
     }
 
-    void enroll() {
-        System.out.println("Students Enrolled: 30");
-    }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Course c = new programmingCourse();
-        Course d = new designCourse();
-
+        Course c = new programmingCourse("Python", 4, 20000, "Java");
+        Course d = new designCourse("Graphics Design", 3, 56000, "Figma Express");
         c.showDetails();
+        System.out.println("------------------------------------------------------");
         d.showDetails();
     }
 
