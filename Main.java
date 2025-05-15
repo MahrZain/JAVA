@@ -926,3 +926,51 @@ import java.util.*;
 //         d.sound();
 //     }
 // }
+
+class Course {
+    String coursename;
+    int duration;
+    int fee;
+
+    void showDetails() {
+        System.out.println("Java, python, Django, .Net Core");
+    }
+
+    void enroll() {
+        System.out.println("Students Enrolled: ");
+    }
+}
+
+class programmingCourse extends Course {
+    String languageUsed = "Java, C++, python";
+
+    void showDetails() {
+        System.out.println("Programming Course: " + languageUsed);
+    }
+
+    void enroll() {
+        System.out.println("Students Enrolled: 20");
+    }
+}
+
+class designCourse extends Course {
+    void showDetails() {
+        String softwareUsed = "Figma Express and Adobe Creative Cloud";
+        System.out.println("Designe Course: " + softwareUsed);
+    }
+
+    void enroll() {
+        System.out.println("Students Enrolled: 30");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Course c = new programmingCourse();
+        Course d = new designCourse();
+
+        c.showDetails();
+        d.showDetails();
+    }
+
+}
