@@ -927,62 +927,152 @@ import java.util.*;
 //     }
 // }
 
-class Course {
-    protected String coursename;
-    protected int duration;
-    protected int fee;
+// class Course {
+//     protected String coursename;
+//     protected int duration;
+//     protected int fee;
 
-    Course(String coursename, int duration, int fee) {
-        this.coursename = coursename;
-        this.duration = duration;
-        this.fee = fee;
-    }
+//     Course(String coursename, int duration, int fee) {
+//         this.coursename = coursename;
+//         this.duration = duration;
+//         this.fee = fee;
+//     }
 
-    void showDetails() {
-        System.out.println("Course Name: " + coursename);
-        System.out.println("Duration Months: " + duration);
-        System.out.println("Fee: " + fee);
-    }
+//     void showDetails() {
+//         System.out.println("Course Name: " + coursename);
+//         System.out.println("Duration Months: " + duration);
+//         System.out.println("Fee: " + fee);
+//     }
 
+// }
+
+// class programmingCourse extends Course {
+//     private String languageUsed;
+
+//     programmingCourse(String name, int duration, int fee, String languageUsed) {
+//         super(name, duration, fee);
+//         this.languageUsed = languageUsed;
+//     }
+
+//     void showDetails() {
+//         super.showDetails();
+//         System.out.println("Programming Course: " + languageUsed);
+//     }
+
+// }
+
+// class designCourse extends Course {
+//     String softwareUsed;
+
+//     designCourse(String name, int duration, int fee, String softwareUsed) {
+//         super(name, duration, fee);
+//         this.softwareUsed = softwareUsed;
+//     }
+
+//     void showDetails() {
+//         super.showDetails();
+//         System.out.println("Designe Course: " + softwareUsed);
+//     }
+
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Course c = new programmingCourse("Python", 4, 20000, "Java");
+//         Course d = new designCourse("Graphics Design", 3, 56000, "Figma Express");
+//         c.showDetails();
+//         System.out.println("------------------------------------------------------");
+//         d.showDetails();
+//     }
+
+// }
+
+// abstract class Employee {
+//     protected int id;
+//     protected String name;
+
+//     Employee(String name, int id) {
+//         this.id = id;
+//         this.name = name;
+//     }
+
+//     void showDetail() {
+//         System.out.println("Name: " + name);
+//         System.out.println("ID: " + id);
+//     }
+// }
+
+// class fullTimeEmployee extends Employee {
+//     private int salary;
+
+//     fullTimeEmployee(String name, int id, int Salary) {
+//         super(name, id);
+//         this.salary = Salary;
+//     }
+
+//     void calculateSalary() {
+//         System.out.println("Salary: " + salary);
+//     }
+
+// }
+
+// class partTimeEmployee extends Employee {
+//     private int salary;
+
+//     partTimeEmployee(String name, int id, int Salary) {
+//         super(name, id);
+//         this.salary = Salary;
+//     }
+
+//     void calculateSalary() {
+//         System.out.println("Salary: " + salary);
+//     }
+// }
+
+// class contractEmployee extends Employee {
+//     private int salary;
+
+//     contractEmployee(String name, int id, int Salary) {
+//         super(name, id);
+//         this.salary = Salary;
+//     }
+
+//     void calculateSalary() {
+//         System.out.println("Salary: " + salary);
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Employee e1 = new fullTimeEmployee("Ali", 1, 10000);
+//         Employee e2 = new partTimeEmployee("Zain", 2, 5000);
+//         Employee e3 = new contractEmployee("Sara", 3, 20000);
+//         e1.showDetail();
+//         e1.calculateSalary();
+//         System.out.println("-------------------------------------------------");   
+//         e2.showDetail();
+//         e2.calculateSalary();
+//         System.out.println("-------------------------------------------------");
+//         e3.showDetail();
+//         e3.calculateSalary();
+//         System.out.println("-------------------------------------------------");
+//     }
+
+// }
+
+abstract class Payment {
+    abstract double pay(double pay);
 }
 
-class programmingCourse extends Course {
-    private String languageUsed;
-
-    programmingCourse(String name, int duration, int fee, String languageUsed) {
-        super(name, duration, fee);
-        this.languageUsed = languageUsed;
+abstract class cardPayment extends Payment{
+    int Amount;
+    cardPayment(){
+        
     }
-
-    void showDetails() {
-        super.showDetails();
-        System.out.println("Programming Course: " + languageUsed);
-    }
-
-}
-
-class designCourse extends Course {
-    String softwareUsed;
-
-    designCourse(String name, int duration, int fee, String softwareUsed) {
-        super(name, duration, fee);
-        this.softwareUsed = softwareUsed;
-    }
-
-    void showDetails() {
-        super.showDetails();
-        System.out.println("Designe Course: " + softwareUsed);
-    }
-
 }
 
 public class Main {
     public static void main(String[] args) {
-        Course c = new programmingCourse("Python", 4, 20000, "Java");
-        Course d = new designCourse("Graphics Design", 3, 56000, "Figma Express");
-        c.showDetails();
-        System.out.println("------------------------------------------------------");
-        d.showDetails();
-    }
 
+    }
 }

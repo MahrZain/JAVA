@@ -114,6 +114,8 @@ public class FYP {
                     System.out.print("Enter password for admin account: ");
                     String adminPassword = scanner.nextLine();
                     adminAccount newAdminAccount = new adminAccount(adminUsername, adminPassword);
+                    System.out.println("Please Wait While We Are Checking Your Credencials");
+                    Accounts.loadingAnimation();                    
                     break;
 
                 default:
