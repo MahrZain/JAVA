@@ -1060,19 +1060,79 @@ import java.util.*;
 
 // }
 
-abstract class Payment {
-    abstract double pay(double pay);
+// abstract class Payment {
+//     abstract double pay(double pay);
+// }
+
+// abstract class cardPayment extends Payment {
+//     String Holder;
+//     long cardHolder;
+
+//     cardPayment(int Holder, long c_N){
+//         this.Holder = Holder;
+//     }
+//     void validateCard(long c_N){
+//         if(c_N.length == 16)
+//             cardHolder = c_N;
+//         else
+//         System.out.println("Invalid card Number!");
+//     }
+// }
+
+// class creditCardPayment extends cardPayment{
+
+// }
+// class debitCardPayment extends cardPayment{
+
+// }
+// class walletPayment extends Payment{
+//     int walletID;
+//     walletPayment(int w){
+//         walletID =w;
+//     }
+//     void pay(double pay){
+//         System.out.println("Payment Wallet Called!");
+//     }
+// }
+
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Payment p1 = new cardPayment("Ali" , 123450);
+//     }
+// }
+
+interface Character{
+    void attack();
+    void defend();
 }
 
-abstract class cardPayment extends Payment{
-    int Amount;
-    cardPayment(){
-        
+class player1 implements Character{
+    public void attack(){
+        System.out.println("Player1 Attack!");
+    }
+    public void defend(){
+        System.out.println("Player1 Depend!");
     }
 }
 
+class player2 implements Character{
+    public void attack(){
+        System.out.println("Player2 Attack!");
+    }
+    public void defend(){
+        System.out.println("Player2 Depend!");
+    }
+}
+
+
 public class Main {
     public static void main(String[] args) {
-
+        Character c1 = new player1();
+        Character c2 = new player2();
+        c1.attack();
+        c1.defend();
+        c2.attack();
+        c2.defend();
     }
 }
