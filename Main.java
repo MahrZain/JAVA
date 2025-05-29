@@ -1101,45 +1101,139 @@ import java.util.*;
 //     }
 // }
 
-interface Character {
-    void attack();
+// interface Character {
+//     void attack();
 
-    void defend();
+//     void defend();
 
-    default void sayhello(){
-            System.out.println("Good bye From Default Interface!");
+//     default void sayhello(){
+//             System.out.println("Good bye From Default Interface!");
+//     }
+// }
+
+// class player1 implements Character {
+//     public void attack() {
+//         System.out.println("Player1 Attack!");
+//     }
+
+//     public void defend() {
+//         System.out.println("Player1 Depend!");
+//     }
+// }
+
+// class player2 implements Character {
+//     public void attack() {
+//         System.out.println("Player2 Attack!");
+//     }
+
+//     public void defend() {
+//         System.out.println("Player2 Depend!");
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Character c1 = new player1();
+//         Character c2 = new player2();
+//         c1.attack();
+//         c1.defend();
+//         c1.sayhello();
+//         c2.attack();
+//         c2.defend();
+//         c2.sayhello();
+//     }
+// }
+
+public interface paymentMethod {
+
+    void processPayment(double amount);
+
+    void generateReceipt();
+
+    default void print() {
+        System.out.println("***");
+    }
+
+}
+
+class CreditCardPayment implements paymentMethod {
+
+    private int cardNumber;
+
+    CreditCardPayment(int card) {
+        cardNumber = card;
+    }
+
+    @Override
+    public void processPayment(double amount) {
+        System.out.println("Processing Payment of: " + amount + " via Credit Card: " + cardNumber);
+    }
+
+    @Override
+    public void generateReceipt() {
+        System.out.println("Receipt Generated For Card: " + cardNumber);
     }
 }
 
-class player1 implements Character {
-    public void attack() {
-        System.out.println("Player1 Attack!");
+class UPIPayment implements paymentMethod {
+    private int upiId;
+
+    UPIPayment(int upiId) {
+        this.upiId = upiId;
     }
 
-    public void defend() {
-        System.out.println("Player1 Depend!");
-    }
-}
-
-class player2 implements Character {
-    public void attack() {
-        System.out.println("Player2 Attack!");
+    @Override
+    public void processPayment(double amount) {
+        System.out.println("Processing Payment of: " + amount + " via UPI ID: " + upiId);
     }
 
-    public void defend() {
-        System.out.println("Player2 Depend!");
+    @Override
+    public void generateReceipt() {
+        System.out.println("Receipt Generated For UPI ID: " + upiId);
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Character c1 = new player1();
-        Character c2 = new player2();
-        c1.attack();
-        c1.defend();
-        c1.sayhello();
-        c2.attack();
-        c2.defend();
-        c2.sayhello();
+        Scanner s = new Scanner(System.in);
+        paymentMethod payment = null;
+        int choice;
+        do {
+            System.out.println("------ Payment Menu ------");
+            System.out.println("1 ==> Credit Card Payment");
+            System.out.println("2 ==> UPI Payment");
+            System.out.println("3 ==> Exit");
+            System.out.print("Enter your choice: ");
+            choice = s.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter Credit Card Number: ");
+                    int card = s.nextInt();
+                    payment = new CreditCardPayment(card);
+                    System.out.print("Enter Amount: ");
+                    double amount1 = s.nextDouble();
+                    payment.processPayment(amount1);
+                    payment.generateReceipt();
+                    payment.print();
+                    break;
+                case 2:
+                    System.out.print("Enter UPI ID (as number): ");
+                    int upi = s.nextInt();
+                    payment = new UPIPayment(upi);
+                    System.out.print("Enter Amount: ");
+                    double amount2 = s.nextDouble();
+                    payment.processPayment(amount2);
+                    payment.generateReceipt();
+                    payment.print();
+                    break;
+                case 3:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice!");
+            }
+            System.out.println();
+        } while (choice != 3);
+        s.close();
     }
 }
