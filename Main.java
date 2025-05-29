@@ -1095,36 +1095,41 @@ import java.util.*;
 //     }
 // }
 
-
 // public class Main {
 //     public static void main(String[] args) {
 //         Payment p1 = new cardPayment("Ali" , 123450);
 //     }
 // }
 
-interface Character{
+interface Character {
     void attack();
+
     void defend();
+
+    default void sayhello(){
+            System.out.println("Good bye From Default Interface!");
+    }
 }
 
-class player1 implements Character{
-    public void attack(){
+class player1 implements Character {
+    public void attack() {
         System.out.println("Player1 Attack!");
     }
-    public void defend(){
+
+    public void defend() {
         System.out.println("Player1 Depend!");
     }
 }
 
-class player2 implements Character{
-    public void attack(){
+class player2 implements Character {
+    public void attack() {
         System.out.println("Player2 Attack!");
     }
-    public void defend(){
+
+    public void defend() {
         System.out.println("Player2 Depend!");
     }
 }
-
 
 public class Main {
     public static void main(String[] args) {
@@ -1132,7 +1137,9 @@ public class Main {
         Character c2 = new player2();
         c1.attack();
         c1.defend();
+        c1.sayhello();
         c2.attack();
         c2.defend();
+        c2.sayhello();
     }
 }
