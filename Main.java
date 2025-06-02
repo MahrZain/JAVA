@@ -1144,96 +1144,96 @@ import java.util.*;
 //     }
 // }
 
-public interface paymentMethod {
+// public interface paymentMethod {
 
-    void processPayment(double amount);
+//     void processPayment(double amount);
 
-    void generateReceipt();
+//     void generateReceipt();
 
-    default void print() {
-        System.out.println("***");
-    }
+//     default void print() {
+//         System.out.println("***");
+//     }
 
-}
+// }
 
-class CreditCardPayment implements paymentMethod {
+// class CreditCardPayment implements paymentMethod {
 
-    private int cardNumber;
+//     private int cardNumber;
 
-    CreditCardPayment(int card) {
-        cardNumber = card;
-    }
+//     CreditCardPayment(int card) {
+//         cardNumber = card;
+//     }
 
-    @Override
-    public void processPayment(double amount) {
-        System.out.println("Processing Payment of: " + amount + " via Credit Card: " + cardNumber);
-    }
+//     @Override
+//     public void processPayment(double amount) {
+//         System.out.println("Processing Payment of: " + amount + " via Credit Card: " + cardNumber);
+//     }
 
-    @Override
-    public void generateReceipt() {
-        System.out.println("Receipt Generated For Card: " + cardNumber);
-    }
-}
+//     @Override
+//     public void generateReceipt() {
+//         System.out.println("Receipt Generated For Card: " + cardNumber);
+//     }
+// }
 
-class UPIPayment implements paymentMethod {
-    private int upiId;
+// class UPIPayment implements paymentMethod {
+//     private int upiId;
 
-    UPIPayment(int upiId) {
-        this.upiId = upiId;
-    }
+//     UPIPayment(int upiId) {
+//         this.upiId = upiId;
+//     }
 
-    @Override
-    public void processPayment(double amount) {
-        System.out.println("Processing Payment of: " + amount + " via UPI ID: " + upiId);
-    }
+//     @Override
+//     public void processPayment(double amount) {
+//         System.out.println("Processing Payment of: " + amount + " via UPI ID: " + upiId);
+//     }
 
-    @Override
-    public void generateReceipt() {
-        System.out.println("Receipt Generated For UPI ID: " + upiId);
-    }
-}
+//     @Override
+//     public void generateReceipt() {
+//         System.out.println("Receipt Generated For UPI ID: " + upiId);
+//     }
+// }
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        paymentMethod payment = null;
-        int choice;
-        do {
-            System.out.println("------ Payment Menu ------");
-            System.out.println("1 ==> Credit Card Payment");
-            System.out.println("2 ==> UPI Payment");
-            System.out.println("3 ==> Exit");
-            System.out.print("Enter your choice: ");
-            choice = s.nextInt();
-            switch (choice) {
-                case 1:
-                    System.out.print("Enter Credit Card Number: ");
-                    int card = s.nextInt();
-                    payment = new CreditCardPayment(card);
-                    System.out.print("Enter Amount: ");
-                    double amount1 = s.nextDouble();
-                    payment.processPayment(amount1);
-                    payment.generateReceipt();
-                    payment.print();
-                    break;
-                case 2:
-                    System.out.print("Enter UPI ID (as number): ");
-                    int upi = s.nextInt();
-                    payment = new UPIPayment(upi);
-                    System.out.print("Enter Amount: ");
-                    double amount2 = s.nextDouble();
-                    payment.processPayment(amount2);
-                    payment.generateReceipt();
-                    payment.print();
-                    break;
-                case 3:
-                    System.out.println("Exiting...");
-                    break;
-                default:
-                    System.out.println("Invalid choice!");
-            }
-            System.out.println();
-        } while (choice != 3);
-        s.close();
-    }
-}
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner s = new Scanner(System.in);
+//         paymentMethod payment = null;
+//         int choice;
+//         do {
+//             System.out.println("------ Payment Menu ------");
+//             System.out.println("1 ==> Credit Card Payment");
+//             System.out.println("2 ==> UPI Payment");
+//             System.out.println("3 ==> Exit");
+//             System.out.print("Enter your choice: ");
+//             choice = s.nextInt();
+//             switch (choice) {
+//                 case 1:
+//                     System.out.print("Enter Credit Card Number: ");
+//                     int card = s.nextInt();
+//                     payment = new CreditCardPayment(card);
+//                     System.out.print("Enter Amount: ");
+//                     double amount1 = s.nextDouble();
+//                     payment.processPayment(amount1);
+//                     payment.generateReceipt();
+//                     payment.print();
+//                     break;
+//                 case 2:
+//                     System.out.print("Enter UPI ID (as number): ");
+//                     int upi = s.nextInt();
+//                     payment = new UPIPayment(upi);
+//                     System.out.print("Enter Amount: ");
+//                     double amount2 = s.nextDouble();
+//                     payment.processPayment(amount2);
+//                     payment.generateReceipt();
+//                     payment.print();
+//                     break;
+//                 case 3:
+//                     System.out.println("Exiting...");
+//                     break;
+//                 default:
+//                     System.out.println("Invalid choice!");
+//             }
+//             System.out.println();
+//         } while (choice != 3);
+//         s.close();
+//     }
+// }
