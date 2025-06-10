@@ -1237,3 +1237,69 @@ import java.util.*;
 //         s.close();
 //     }
 // }
+
+// class Man{
+//     String Name;
+//     String Bank;
+
+//     Man(String name,String b){
+//         Name=name;
+//         Bank = b;
+//     }
+// }
+// class Zain{
+//     Zain(Man m){
+//         System.out.println("Name: "+m.Name);
+//         System.out.println("Bank: "+m.Bank);
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//             Man m = new Man("Zain","ISB");
+//             Zain z = new Zain(m);
+//     }
+// }
+
+
+
+
+class Student {
+    String name;
+    int ID;
+
+    Student(String name, int id) {
+        this.name = name;
+        ID = id;
+    }
+}
+
+class University {
+    String name;
+    Student student;
+
+    University(String name, Student s) {
+        this.name = name;
+        this.student = s;
+
+    }
+
+    void call() {
+        System.out.println("Universiy: " + name);
+        System.out.println("Studnet Name: " + student.name);
+        System.out.println("Studnet ID: " + student.ID);
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        Student s = new Student("M.Zain", 1208);
+        University u = new University("Fast", s);
+        u.call();
+        u = null;
+        System.out.println("Studnet Name: " + s.name);
+        System.out.println("Studnet ID: " + s.ID);
+    }
+
+}
