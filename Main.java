@@ -1255,14 +1255,12 @@ import java.util.*;
 // }
 
 // public class Main {
+
 //     public static void main(String[] args) {
 //             Man m = new Man("Zain","ISB");
 //             Zain z = new Zain(m);
 //     }
 // }
-
-
-
 
 // class Student {
 //     String name;
@@ -1304,6 +1302,151 @@ import java.util.*;
 
 // }
 
+// import java.io.File;
+// import java.io.FileInputStream;
+// import java.io.FileOutputStream;
+// import java.io.IOException;
 
+// class Test {
+//     File f1 = new File("E:\\JAVA\\File\\test.txt");
 
+//     public void createFile() {
+// ---------------------------------------Create File
+// Test1.txt--------------------------------------------------------
 
+// try{
+// if(f1.createNewFile()){
+// f1.createNewFile();
+// System.out.println("File: "+f1.getName() );
+// }
+// else{
+// System.out.println("FIle Already Created!");
+// }
+
+// }
+// catch(IOException e){
+// System.out.println("Error Occured!"+e);
+// }
+
+// -------------------------------------Just Write it auto Create the File
+// -----------------------------------------------
+
+// String content = "Hello First Write Into The File!";
+// try {
+// FileOutputStream fos = new FileOutputStream(f1);
+// fos.write(content.getBytes());
+// System.out.println("Data written to the file: " + f1.getName());
+// } catch (Exception e) {
+// System.out.println("Error occurred while writing to the file: " + e);
+
+// }
+
+// ----------------------------------------------------- Read From The File
+// ----------------------------------------------------------
+
+// try {
+
+// FileInputStream fis = new FileInputStream(f1);
+// int i;
+// while ((i=fis.read()) != -1) {
+// System.out.print((char) i);
+// } System.out.println();
+// System.out.println();
+// } catch (Exception e) {
+// System.out.println("Error occurred while writing to the file: " + e);
+// }
+
+// -------------------------------------- Delete Data From The File  --------------------------------------------
+
+// try {
+//     FileOutputStream fos = new FileOutputStream(f1);
+//     System.out.println("File Data Deleted Done!");
+// } catch (Exception e) {
+//     System.out.println("Error occurred while writing to the file: " + e);
+// }
+
+// -------------------------------------- Input From The User  --------------------------------------------
+
+//         Scanner sc = new Scanner(System.in);
+// try {
+//     FileOutputStream fos = new FileOutputStream(f1);
+//     System.out.print("Enter SomeThing To Write Into That: ");
+//     String data = sc.nextLine();
+//     fos.write(data.getBytes());
+//     System.out.println("Data Write Done in File!");
+// } catch (Exception e) {
+//     System.out.println("Error occurred while writing to the file: " + e);
+// }
+
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Test t = new Test();
+//         t.createFile();
+//     }
+// }
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+class test {
+    Scanner sc = new Scanner(System.in);
+
+    void menu() {
+        System.out.println("1 ==> Add Data In File");
+        System.out.println("2 ==> Read Data From File");
+        System.out.println("3 ==> Delete All Data From File");
+        System.out.println("4 ==> Delete File");
+        System.out.println("5 ==> Exit");
+    }
+
+    void  writeData(String data){
+        try {
+            if(data){
+                FileOutputStream fos = new FileOutputStream(f1);
+                fos.write(data.getBytes());
+                System.out.println("Data Written Successfully!");
+            }
+        } catch (Exception e) {
+            System.out.println("Error occurred while writing to the file: " + e);
+            return
+        
+    }
+}
+
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        test t = new test();
+        t.menu();
+        System.out.println("Enter Your Choice: ");
+        int choice = sc.nextLine();
+        do {
+            switch (choice) {
+                case 1:
+                System.out.println("Enter Data To Write into The File: ");
+                String data = sc.nextLine();
+                t.writeData(data);
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+
+                default:
+                    break;
+            }
+        } while (choice != 5);
+    }
+}
