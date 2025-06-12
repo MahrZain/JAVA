@@ -1395,6 +1395,7 @@ import java.io.IOException;
 
 class test {
     Scanner sc = new Scanner(System.in);
+    File f1 = new File("E:\\JAVA\\File\\p.txt");
 
     void menu() {
         System.out.println("1 ==> Add Data In File");
@@ -1404,38 +1405,57 @@ class test {
         System.out.println("5 ==> Exit");
     }
 
-    void  writeData(String data){
+    void writeData(String data) {
         try {
-            if(data){
+            if (!data.isBlank()) {
                 FileOutputStream fos = new FileOutputStream(f1);
                 fos.write(data.getBytes());
-                System.out.println("Data Written Successfully!");
+                System.out.println("Data written to the file: " + f1.getName());
             }
         } catch (Exception e) {
             System.out.println("Error occurred while writing to the file: " + e);
-            return
-        
+            return;
+        }
+
     }
-}
+    void readData() {
+        try {
+                FileInputStream fis = new FileInputStream(f1);
+                int i;
+                System.out.println();System.out.println();
+                while ((i=fis.read()) != -1) {
+                    System.out.print((char) i);
+                }System.out.println();
+                System.out.println();
+                System.out.println();
+            
+        } catch (Exception e) {
+            System.out.println("Error occurred while writing to the file: " + e);
+            return;
+        }
+
+    }
 
 }
 
 public class Main {
     public static void main(String[] args) {
+        int choice = 0;
         Scanner sc = new Scanner(System.in);
         test t = new test();
-        t.menu();
-        System.out.println("Enter Your Choice: ");
-        int choice = sc.nextLine();
         do {
+            t.menu();
+            System.out.print("Enter Your Choice: ");
+            choice = sc.nextInt();
+            sc.nextLine();
             switch (choice) {
                 case 1:
-                System.out.println("Enter Data To Write into The File: ");
-                String data = sc.nextLine();
-                t.writeData(data);
+                    System.out.print("Enter Data To Write into The File: ");
+                    String data = sc.nextLine();
+                    t.writeData(data);
                     break;
                 case 2:
-
+                        t.readData();
                     break;
                 case 3:
 
@@ -1445,6 +1465,7 @@ public class Main {
                     break;
 
                 default:
+                    System.out.println("Exiting ......");
                     break;
             }
         } while (choice != 5);
