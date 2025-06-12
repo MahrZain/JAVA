@@ -59,7 +59,8 @@ class TicketEntry {
     }
 }
 
-// The main hosting‐management system, handling package catalog and support tickets
+// The main hosting‐management system, handling package catalog and support
+// tickets
 class WebHostingManagementSystem {
     private static ArrayList<WebHostingPackage> packages = new ArrayList<>();
     private static ArrayList<TicketEntry> tickets = new ArrayList<>();
@@ -221,7 +222,8 @@ class WebHostingManagementSystem {
             return;
         }
         paymentStatus = "Paid";
-        System.out.println("Payment of $" + getSelectedPlanPrice() + " for " + selectedPlan + " completed via " + paymentMethod + ".");
+        System.out.println("Payment of $" + getSelectedPlanPrice() + " for " + selectedPlan + " completed via "
+                + paymentMethod + ".");
         System.out.println("Payment Status: " + paymentStatus);
     }
 
@@ -242,7 +244,8 @@ class WebHostingManagementSystem {
     }
 }
 
-// Base “Accounts” class: holds username, password, and creation date if applicable
+// Base “Accounts” class: holds username, password, and creation date if
+// applicable
 class Accounts {
     protected String username;
     protected String password;
@@ -304,7 +307,8 @@ class Accounts {
     }
 }
 
-// Represents a user account; when constructed, prints creation details and initializes hosting data
+// Represents a user account; when constructed, prints creation details and
+// initializes hosting data
 class HostingAccounts extends Accounts {
     public WebHostingManagementSystem hostingData;
 
@@ -549,7 +553,8 @@ public class FYP {
                             double planPrice = currentUser.hostingData.getSelectedPlanPrice();
                             System.out.println("\n=== Summary of Your Selections ===");
                             System.out.println("Username: " + currentUser.username);
-                            System.out.println("Hosting Plan: " + currentUser.hostingData.selectedPlan + " ($" + planPrice + ")");
+                            System.out.println(
+                                    "Hosting Plan: " + currentUser.hostingData.selectedPlan + " ($" + planPrice + ")");
                             System.out.println("Domain Name: " + currentUser.hostingData.domainName);
                             System.out.println("Database Name: " + currentUser.hostingData.databaseName);
                             System.out.println("Email Account: " + currentUser.hostingData.emailAccount);
@@ -610,7 +615,8 @@ public class FYP {
                         } while (userOption != 4);
 
                     } else {
-                        System.out.println("Invalid User Username or Password! Please ask an admin to create your account first.");
+                        System.out.println(
+                                "Invalid User Username or Password! Please ask an admin to create your account first.");
                         Accounts.delay();
                     }
                     break;
