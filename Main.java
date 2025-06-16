@@ -1390,12 +1390,13 @@ import java.util.*;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.FileOutputStream; //write data in File.txt
 import java.io.IOException;
 
 class test {
     Scanner sc = new Scanner(System.in);
     File f1 = new File("E:\\JAVA\\File\\p.txt");
+    // E:\CapCut Drafts
 
     void menu() {
         System.out.println("1 ==> Add Data In File");
@@ -1405,11 +1406,13 @@ class test {
         System.out.println("5 ==> Exit");
     }
 
-    void writeData(String data) {
+    void writeData(String name,int id, String spec) {
         try {
-            if (!data.isBlank()) {
+            if (!name.isBlank()) {
                 FileOutputStream fos = new FileOutputStream(f1);
-                fos.write(data.getBytes());
+                fos.write(name.getBytes());
+                fos.write(id);
+                fos.write(spec.getBytes());
                 System.out.println("Data written to the file: " + f1.getName());
             }
         } catch (Exception e) {
@@ -1418,22 +1421,42 @@ class test {
         }
 
     }
+
     void readData() {
         try {
-                FileInputStream fis = new FileInputStream(f1);
-                int i;
-                System.out.println();System.out.println();
-                while ((i=fis.read()) != -1) {
-                    System.out.print((char) i);
-                }System.out.println();
-                System.out.println();
-                System.out.println();
-            
+            FileInputStream fis = new FileInputStream(f1);
+            int i;
+            System.out.println();
+            System.out.println();
+            while ((i = fis.read()) != -1) {
+                System.out.print((char) i);
+            }
+            System.out.println();
+            System.out.println();
+            System.out.println();
+
         } catch (Exception e) {
             System.out.println("Error occurred while writing to the file: " + e);
             return;
         }
 
+    }
+
+    void delete() {
+        try {
+            FileOutputStream fos = new FileOutputStream(f1);
+            System.out.println("File Deleted Successfully!");
+
+        } catch (Exception e) {
+            System.out.println("Error occurred while writing to the file: " + e);
+        }
+    }
+    void deleteFile(){
+        if(f1.delete())
+        System.out.println("File deleted successfully.");
+        else{
+            System.out.println("Failed to Delete The File!");
+        }
     }
 
 }
@@ -1450,18 +1473,23 @@ public class Main {
             sc.nextLine();
             switch (choice) {
                 case 1:
-                    System.out.print("Enter Data To Write into The File: ");
-                    String data = sc.nextLine();
-                    t.writeData(data);
+                    System.out.print("Enter Resturent Name: ");
+                    String name = sc.nextLine();
+                    System.out.println("Enter Resturent ID: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("Enter Resturent Sepecialization: ");
+                    String special = sc.nextLine();
+                    t.writeData(name,id,special);
                     break;
                 case 2:
-                        t.readData();
+                    t.readData();
                     break;
                 case 3:
-
+                    t.delete();
                     break;
                 case 4:
-
+                t.deleteFile();
                     break;
 
                 default:
