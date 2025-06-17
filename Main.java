@@ -1391,7 +1391,10 @@ import java.util.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream; //write data in File.txt
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.StringReader;
+import java.io.StringWriter;
 
 class test {
     Scanner sc = new Scanner(System.in);
@@ -1409,10 +1412,8 @@ class test {
     void writeData(String name,int id, String spec) {
         try {
             if (!name.isBlank()) {
-                FileOutputStream fos = new FileOutputStream(f1);
-                fos.write(name.getBytes());
-                fos.write(id);
-                fos.write(spec.getBytes());
+                FileWriter fos = new FileWriter(f1);
+                fos.write(name);
                 System.out.println("Data written to the file: " + f1.getName());
             }
         } catch (Exception e) {
